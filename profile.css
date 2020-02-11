@@ -1,0 +1,254 @@
+.*{
+	outline: none;
+	font-family: "Segoe UI";
+
+}
+
+*:focus{
+	outline: none;
+}
+.headerdiv{
+	display: inline-flex;
+	justify-content: space-around;
+	padding-bottom: 100/px;
+}
+
+.mytext{
+	font-family: "Segoe UI";
+}
+
+.head{
+	position: sticky;
+	list-style: none;
+	overflow: hidden;
+	top: 0;
+	background-color: #bbf0f3;
+	background-image: linear-gradient(195deg, #bbf0f3 0%, #f6d285 74%); 
+	color: #ffffff;
+	margin: 0;
+	display: block;
+	padding: 0px;
+}
+
+.logsign{
+	color: white;
+	background-color: transparent;
+	border:none;
+	display: inline-block;
+	padding: 20px 20px;
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+	color: black;	
+}
+
+.logsign:hover{	
+	transition-duration: 0.2s;
+	cursor: pointer;
+	transform: scale(1.05);
+	color: white;
+}
+
+#Personal-front:hover{
+	display: none;
+}
+
+.headerdiv{
+	padding-right: 10px;
+	padding-bottom: 100px;
+}
+
+.headline{
+	color: white;
+}
+
+.innerdiv{
+	width: 40%;
+	text-align: justify;
+	padding: 20px;
+	border: 1px solid white;
+	margin: 2px;
+	border-radius: 20px;
+	z-index: 2;
+	border-width: medium;
+	transition-duration: 0.2s;
+	border-color: none;
+	font-size: 110%;
+	background-color: transparent;
+}	
+
+.innerdiv:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 15px 15px #F1ECE9;
+	cursor: pointer;
+	color: black;
+	border-color: #F1ECE9;
+}
+
+.innerdiv:focus{
+	background-color: red;
+	height: 100%;
+}
+.fieldspan{
+	font-size: 190%;
+	padding: 30px;
+}
+
+.fieldspan:hover{
+	text-shadow: 10px greens;
+
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url('blue-universe-956981.jpg');
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headcontain {
+	font-family: font92720;
+  background-color: transparent;
+  height: 100px;
+  width: 280px;
+  padding: 0px;
+
+}
+
+.headcontain-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+
+.headcontain:hover .headcontain-inner {
+	transition-duration: 0.4s;
+  transform: rotateY(180deg);
+  	background-color: #3F51B5;
+}
+
+.headcontain-front, .headcontain-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: transparent;
+}
+
+.headcontain-front {
+  background-color: transparent;
+  color: black;
+/*  border: 2px solid black;
+*/  padding-top: 10px;
+  border-width: 10px;
+}
+
+.headcontain-back {
+	transition-duration: 0.3s;
+	padding: 0px;
+  background-color: transparent;
+  color: white;
+  transform: rotateY(180deg);
+
+}
+
+.footer{
+	background-color: #344955;
+	bottom: 0;
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: rgb(211,211,211);
+}
+
+.footerin{
+	padding-top: 10px;
+	width: 30%;
+}
+
+.footermid{
+padding: 30px;
+display: flex;
+text-align: center;
+flex-direction:row; 
+justify-content: space-around;
+}
+
+
+.footermid-list-el{
+	color: gray;
+}
+
+.footermid-el{
+	transition-duration: 0.2s;
+}
+.footermid-el:hover{
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.imgclass{
+	padding: 30px;
+	margin: 0px;
+	width: 50%;
+	height: 50%;
+	transition-duration: 0.2s;
+}
+
+.imgclass:hover{
+	transform: scale(1.3);
+	cursor: pointer;
+}	
+.footerend{
+display: flex;
+text-align: center;
+flex-direction:row; 
+justify-content: space-around;
+width:10%;
+}
+
+.footerinput{
+	padding: 15px;
+	border-radius: 40px 0px 0px 40px; 
+	width: 60%;
+	border-style: solid;
+	transition-duration: 0.3s;
+	color: 
+}
+
+.footerinput:hover{
+	padding: 16px;
+	border-style: none;
+	transition-duration: 0.3s;
+	background-color: rgba(216,216,216 0.2);
+	box-shadow: 0px 0px 8px 8px #b0e0ee;
+	color: black;
+}
+.footerbut{
+	width: 20%;
+	padding: 17px;
+	border-width: 3px;
+	color: black;
+	border-radius: 0px 40px 40px 0px; 
+	border-style: none; 
+	background-color: #faab30;
+	transition-duration: 0.2s;
+}
+
+.footerbut:hover{
+
+
+}
