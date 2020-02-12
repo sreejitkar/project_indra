@@ -73,10 +73,16 @@ if($_POST &&  isset($_POST['login']))
 				<h4>About</h4></a>
 			</li>
 			<li class="Nav_Button hvr-underline-from-center">
+				<a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
 
 				<h4>Why Us?</h4>
+			</a>
 			</li>
-			<li class="Nav_Button hvr-underline-from-center"><h4>Help</h4></li>
+			<li class="Nav_Button hvr-underline-from-center">
+				<a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
+					<h4>Help</h4>
+				</a>
+			</li>
 
 		</ul>
 	</div>
@@ -178,7 +184,7 @@ window.onload = function() {
 					<h1 class="typestyle"><span style="color: rgb(0,168,246);">Energy</span><hr style="margin: 2%;border-top: none;"><span
      class="txt-rotate"
      data-period="500"
-     data-rotate='[ "has never been easier. ", "on your fingertips. ", "to you,for you. ", "faster delivered than ever. ", "simplified by iNDRA. " ]'></span></h1>
+     data-rotate='[ "has never been easier. ", "on your fingertips. ", "to you, for you. ", "faster delivered than ever. ", "simplified by iNDRA. " ]'></span></h1>
 <!-- 					<button class="">Get It Now</button>
 	We help making change happen
 	Energy has never been simpler
@@ -190,6 +196,7 @@ window.onload = function() {
 </div>
 </div>
 
+<!-- VIDEO CONTAINER -->
 
 	<div class="video-container">
 
@@ -209,16 +216,12 @@ window.onload = function() {
 <?php if(isset($response)) echo "<h4 class='alert'>".$response."</h4>";?>
 
 <div class="infoclass-out">
-	<h1>About</h1>
-	<div class="infoclass-in">
+	<h1 style="color: rgb(0,168,246);">About</h1>
+	<div class="infoclass-content">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet mi gravida, maximus felis vel, imperdiet sapien. Nulla aliquam egestas urna in feugiat. Suspendisse mattis est vel molestie fermentum. Duis eu ligula cursus, aliquam metus non, tincidunt ligula. Integer ut blandit sapien, eget varius nunc. Curabitur risus lectus, facilisis eget ex sed, finibus dapibus metus. Sed non sollicitudin mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus sed urna nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-hello
+		Aenean facilisis nibh eu dui tempor, eu malesuada metus accumsan. Proin pellentesque faucibus tempus. Nunc lacinia blandit rhoncus. Donec urna velit, condimentum nec accumsan a, facilisis et eros. Praesent nec magna eu purus pharetra semper id sed nibh. Nulla non enim id ex congue blandit. Aliquam urna risus, consequat vel velit at, sagittis varius justo. Curabitur tincidunt nisl leo, a fringilla dui dignissim sodales. Donec nec justo eget elit pulvinar ornare vel id magna. Duis dignissim feugiat nisi vel ullamcorper. Nunc lacinia blandit rhoncus. Donec urna velit, condimentum nec accumsan a, facilisis et eros. Praesent nec magna eu purus pharetra semper id sed nibh. Nulla non enim id ex congue blandit. Aliquam urna risus, consequat vel velit at, sagittis varius justo. Curabitur tincidunt nisl leo, a fringilla dui dignissim sodales. Donec nec justo eget elit pulvinar ornare vel id magna. Duis dignissim feugiat nisi vel ullamcorper. Nunc lacinia blandit rhoncus. Donec urna velit, condimentum nec accumsan a, facilisis et eros. Praesent nec magna eu purus pharetra semper id sed nibh. Nulla non enim id ex congue blandit. Aliquam urna risus, consequat vel velit at, sagittis varius justo. Curabitur tincidunt nisl leo, a fringilla dui dignissim sodales. Donec nec justo eget elit pulvinar ornare vel id magna. Duis dignissim feugiat nisi vel ullamcorper.
 
-Aenean facilisis nibh eu dui tempor, eu malesuada metus accumsan. Proin pellentesque faucibus tempus. Nunc lacinia blandit rhoncus. Donec urna velit, condimentum nec accumsan a, facilisis et eros. Praesent nec magna eu purus pharetra semper id sed nibh. Nulla non enim id ex congue blandit. Aliquam urna risus, consequat vel velit at, sagittis varius justo. Curabitur tincidunt nisl leo, a fringilla dui dignissim sodales. Donec nec justo eget elit pulvinar ornare vel id magna. Duis dignissim feugiat nisi vel ullamcorper.
-
-Maecenas imperdiet, turpis id lobortis elementum, risus lectus aliquam turpis, a efficitur neque nibh a dui. Integer at convallis ante, ac ornare libero. Ut ac diam eu augue malesuada auctor. Morbi iaculis venenatis lacus, nec gravida nibh aliquet a. Aenean a nulla augue. Nullam euismod tortor elit, quis placerat mauris condimentum consequat. Praesent ac auctor sapien, ac volutpat enim. Sed dapibus, enim vel placerat congue, tortor augue fringilla dui, elementum scelerisque nibh nunc in erat. Sed feugiat volutpat laoreet. Aliquam nec eros vitae velit euismod facilisis eget at nisl. Nunc egestas tincidunt velit, vel vulputate velit egestas id. Proin mattis mattis ligula, a euismod mi mollis vel.
-
-Vivamus euismod ante non neque porta, nec pretium nulla aliquet. Duis dignissim nibh diam, in dictum mi consequat ut. Fusce eu est a magna fringilla accumsan at quis elit. Praesent nec luctus neque. Etiam ut justo eros. Aliquam justo lacus, pretium sed feugiat id, iaculis eget velit. Vivamus ullamcorper tristique eros, eget interdum justo. Phasellus nec justo dolor. Fusce iaculis, nisl nec elementum mattis, mauris libero fringilla neque, convallis iaculis tortor lorem ac tellus. Suspendisse potenti. Nunc vestibulum facilisis purus sed pulvinar. Sed a tristique ipsum. Praesent risus sem, lobortis ac felis et, malesuada scelerisque augue. Pellentesque ornare faucibus dui, in egestas lorem tincidunt sed. Phasellus tincidunt tortor et tempor sollicitudin.
+</div>
 </div>
 <div class="footer">
 	<center>

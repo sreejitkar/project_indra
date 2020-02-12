@@ -13,10 +13,16 @@ body {
 /*	background-color: #5C6BC0;
 */}
 
+
 .bodydiv{
 	position: relative;
-	overflow: hidden; justify-content: center; align-items: center; width: 100%;
+	overflow: hidden; 
+	justify-content: center; 
+	align-items: center; 
+	width: 100%;
 	height: 100vh;
+	margin: 0px;
+	padding: 0px;
 }
 
 html {
@@ -24,9 +30,6 @@ html {
 	scroll-behavior: smooth;
 }
 
-a, a:hover, a:active, a:visited, a:focus {
-    text-decoration:none;
-}
 
 /******************** BACKGROUND VIDEO *******************/
 
@@ -41,6 +44,7 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 .video-overlay
 {
+	overflow: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -73,16 +77,9 @@ a, a:hover, a:active, a:visited, a:focus {
 	}
 }
 
-/*@media screen and (max-width: 500px)
-{
-	.navbar-logo
-	{
-		background-color: white;
-	}
-}
-*/
+
 	
-	/*@media screen and (max-width: 450px) {
+	/*	@media screen and (max-width: 450px) {
 	  .navbar-logo {
 	    background-color: white;
 	  }
@@ -148,6 +145,13 @@ a, a:hover, a:active, a:visited, a:focus {
 	transition-duration: 0.2s
 
 }
+
+.Nav_Button_Link:visited
+{
+	color: rgb(0,168,246);
+}
+
+
 .Nav_Button:hover{
 
 	padding-bottom: 2%;
@@ -173,12 +177,12 @@ a, a:hover, a:active, a:visited, a:focus {
 /*	transition-delay: 0.1s;
 */}
 
-.Nav_Button_Link:visited
+.Nav_Button_Link:hover 
 {
 	color: rgb(0,168,246);
 }
 
-.Nav_Button_Link:hover 
+.Nav_Button_Link:active
 {
 	color: rgb(0,168,246);
 }
@@ -209,6 +213,10 @@ a, a:hover, a:active, a:visited, a:focus {
 
 /**************** Login-Panel *******************/
 
+
+.container1{
+
+}
 #login-panel
 {
 	color: gray;
@@ -221,7 +229,7 @@ a, a:hover, a:active, a:visited, a:focus {
 	padding-left: 2%;
 	padding-right: 2%;
 	padding-bottom: 3%;
-	margin-bottom: 5%;
+	margin-bottom: 8%;
 	margin-left: 1%;
 	margin-right: 3%;
 }
@@ -296,7 +304,6 @@ a, a:hover, a:active, a:visited, a:focus {
 	margin-top: 12%;
 	margin-bottom: 3%;
 }
-
 
 
 .register-button
@@ -489,7 +496,20 @@ a, a:hover, a:active, a:visited, a:focus {
   transform: translateY(5px);
   /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
 }
+/*****************Information***************************/
 
+
+.infoclass-out{
+	width: 100%;
+	background-color: white;
+	color: black;
+	padding:6%;
+}
+
+.infoclass-content{
+font-size: 140%;
+	text-align:justify-all;
+}
 /**************** FOOTER ******************************/
 
 .footer{
@@ -525,6 +545,10 @@ justify-content: space-around;
 .footermid-el:hover{
 	cursor: pointer;
 	transform: scale(1.1);
+
+	.footer-label:hover{
+		color: green;
+	}
 }
 
 .imgclass{
@@ -564,12 +588,11 @@ width:10%;
 	color: black;
 }
 .footerbut{
-	padding: 2.7%;
+	padding: 2.5%;
 	width: 20%;
-	border-width: 3px;
 	color: rgb(0,168,246);
 	border-radius: 0px 40px 40px 0px; 
-	border:1px solid rgb(0,168,246);
+	border:3px solid rgb(0,168,246);
 	background-color: transparent;
 	transition-duration: 0.2s;
 }
