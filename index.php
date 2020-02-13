@@ -107,7 +107,7 @@ if($_POST &&  isset($_POST['login']))
 							<br><br>
 							<input type="submit" name="login" value="LOGIN" class="submitbut">
 							<br><h5>OR</h5><br>
-							<a href="#" class="register-button" style="text-decoration: none;" >		
+							<a href="signup.php" class="register-button" style="text-decoration: none;" >		
 								<span></span>
 								<span></span>
 								<span></span>

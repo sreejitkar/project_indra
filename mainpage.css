@@ -301,7 +301,7 @@ html {
 	padding-left: 5%:
 	padding-right:2%; 
 	margin-right: 5%; 
-	margin-top: 12%;
+	margin-top: 9%;
 	margin-bottom: 3%;
 }
 
@@ -507,8 +507,9 @@ html {
 }
 
 .infoclass-content{
-font-size: 140%;
-	text-align:justify-all;
+font-size: 120%;
+justify-content: space-around;
+text-align: justify;
 }
 /**************** FOOTER ******************************/
 
