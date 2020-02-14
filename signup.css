@@ -39,13 +39,183 @@ body {
 .signup-panel{
 	display: flex;
 	color: white;
-	justify-content: flex-end;
+	margin: auto;
+    width: 60%;
 }
 
 .signup-panel-design{
-	border:5px solid white;
+	border:1px solid white;
+	width: 50%;
+	padding: none;
+	overflow: hidden;
+}
+
+.signup-panel-design-logo{
+	display: block;
 }
 
 .signup-panel-form{
-	border:5px solid white;
+	border:1px solid white;
+	width: 50%;
+	padding: 2%;
+
+}
+
+.container{
+display: inline-block;
+padding: none;
+margin: none;
+/*padding-left: 45%;
+padding-top: 10%;
+padding-bottom: 10%;*/
+}
+
+
+.inputbody{
+	width: 90%;
+	border-radius: 5px;
+	padding: 5%;
+	background-color: rgba(256,256,256,0.2);
+	color: #a9a9a9;
+	margin-bottom: 1%;
+	border:rgba(256,256,256,0.2);
+	transition-duration: 0.2s;
+}
+.inputbody:hover{
+	transform: scale(1.05);
+	color: white;
+}
+.check1{
+	background-color: transparent;
+	color: transparent;
+}
+
+.submitbut{
+	width: 90%;
+	border-radius: 5px;
+	padding: 3%;
+	background-color:rgb(0,168,246);
+	border: none;
+	color: black;
+	margin: 5%;
+	letter-spacing: 4px;
+}
+
+.submitbut:hover{
+/*	width: 35%;
+	padding: 20px;*/
+	border-color: black;
+	transition-duration: 0.2s;
+	box-shadow: 0 0 10px 3px #b0e0ee;
+	color: black;
+}
+.register-button
+{
+	position: relative;
+	display: inline-block;
+	padding: 3.5%;
+	color: #2196f3;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	text-decoration: none;
+	overflow: hidden;
+	transition: 0.1s;
+	width: 90%;
+	color: #a9a9a9;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,0.2);
+}
+
+.register-button:visited
+{
+	color: gray;
+
+}
+
+
+.register-button:hover
+{
+	color: rgb(0,168,246);
+	background-color: transparent;
+	transition-delay: 0.3s; 
+	border-color: rgb(0,168,246);
+	border-style: solid;
+	border-width: 1px;
+	padding: 3.2%;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+.register-button:active{
+	text-decoration: none;
+}
+
+
+.register-button span
+{
+	position: absolute;
+	display: block;
+}
+
+.register-button span:nth-child(1)
+{
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg,transparent,#2196f3);
+}
+
+.register-button:hover span:nth-child(1)
+{
+	left: 100%;
+	transition: 0.5s;
+}
+
+.register-button span:nth-child(3)
+{
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg,transparent,#2196f3);
+}
+
+.register-button:hover span:nth-child(3)
+{
+	right: 100%;
+	transition: 1s;
+	transition-delay: 0.12s;
+}
+
+.register-button span:nth-child(2)
+{
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg,transparent,#2196f3);
+}
+
+.register-button:hover span:nth-child(2)
+{
+	top: 100%;
+	transition: 1s;
+	transition-delay: 0.07s;
+}
+
+.register-button span:nth-child(4)
+{
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg,transparent,#2196f3);
+}
+
+.register-button:hover span:nth-child(4)
+{
+	bottom: 100%;
+	transition: 1s;
+	transition-delay: 0.02s;
 }

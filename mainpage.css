@@ -213,10 +213,6 @@ html {
 
 /**************** Login-Panel *******************/
 
-
-.container1{
-
-}
 #login-panel
 {
 	color: gray;
@@ -416,6 +412,7 @@ html {
 	transition: 1s;
 	transition-delay: 0.02s;
 }
+
 /************************FLIPCARD************************************/
 
 
