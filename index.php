@@ -192,10 +192,29 @@ if($_POST &&  isset($_POST['login']))
 	Inspire the iNDRA in you
 
 -->
-<button class="hvr-float-shadow"><h4>Learn More</h4></button>
+<button class="hvr-float-shadow"><h4>Learn More</h4></button><br>
+<FORM >
+<button id="buttonlink1" name="button1" onclick="https://api.thingspeak.com/update?api_key=9VV7F5VS2UX3JF9G&field1=1"><h4>ON</h4></button>
+<button id="buttonlink2" name="button2" onclick="https://api.thingspeak.com/update?api_key=9VV7F5VS2UX3JF9G&field1=0"><h4>OFF</h4></button>
+</FORM>
 </div>
 </div>
+<!-- <script>
+	$(document).ready(function() {
+    $('buttonlink1').click(function() {
+        alert('LED IS ON.');
+        return false;
+    });
+});
 
+	$(document).ready(function() {
+    $('buttonlink2').click(function() {
+        alert('LED IS OFF');
+        return false;
+    });
+});
+
+</script> -->
 <!-- VIDEO CONTAINER -->
 
 <div class="video-container">
