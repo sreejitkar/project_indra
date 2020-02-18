@@ -13,6 +13,27 @@ body {
 /*	background-color: #5C6BC0;
 */}
 
+/**************	MEDIA****************/
+
+@media (min-aspect-ratio: 16/9)
+{
+	.video-container
+	{
+		width: 100%;
+		height: auto;
+
+	}
+
+
+}
+@media (max-aspect-ratio: 16/9)
+{
+	.video-container
+	{
+		width: auto;
+		height: 100%;
+	}
+}
 .video-container
 {
 	position: absolute;
@@ -40,27 +61,59 @@ body {
 	display: flex;
 	color: white;
 	margin: auto;
+	margin-bottom: 50%;
     width: 60%;
+    overflow: hidden;
+/*    border-radius: 20px;
+    padding: 1%;*/
+    background-color: transparent;
+/*	-webkit-box-shadow: 0px 0px 51px 14px rgba(255,255,255,0.7);
+-moz-box-shadow: 0px 0px 51px 14px rgba(255,255,255,0.7);
+box-shadow: 0px 0px 51px 14px rgba(255,255,255,0.7);*/
 }
 
 .signup-panel-design{
-	border:1px solid white;
 	width: 50%;
 	padding: none;
 	overflow: hidden;
+	position: relative;
+	color: white;
 }
 
 .signup-panel-design-logo{
-	display: block;
+display: block;
 }
+.signup-panel-design-text{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.signup-panel-design-text-heading{
+	color: white;
+	font-size: 400%;
+	letter-spacing: 25px;
+	 font-family: 'Helvetica Neue', sans-serif; 
+	 font-weight: bold; 
+/*	 letter-spacing: -1px; 
+*/	
+/*	 text-align: center;
+*/}
 
 .signup-panel-form{
-	border:1px solid white;
 	width: 50%;
-	padding: 2%;
+	padding: 1%;
+	background-color: rgba(255,255,255,0.1);
+	border-radius: 0 5px 5px 0;
 
 }
+#profilepic{
+	width: 30%;
+	height: 80px;
+	position: relative;
+	border-radius: 50%;
 
+}
 .container{
 display: inline-block;
 padding: none;
@@ -77,7 +130,7 @@ padding-bottom: 10%;*/
 	padding: 5%;
 	background-color: rgba(256,256,256,0.2);
 	color: #a9a9a9;
-	margin-bottom: 1%;
+	margin-bottom: 7%;
 	border:rgba(256,256,256,0.2);
 	transition-duration: 0.2s;
 }
@@ -85,6 +138,18 @@ padding-bottom: 10%;*/
 	transform: scale(1.05);
 	color: white;
 }
+
+.inputbody::placeholder{
+	color: rgba(255,255,255,0.5);
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	font-size: 90%; 
+}
+
+.inputbody:hover::placeholder{
+	font-size: 80%;
+}
+
 .check1{
 	background-color: transparent;
 	color: transparent;
@@ -106,29 +171,30 @@ padding-bottom: 10%;*/
 	padding: 20px;*/
 	border-color: black;
 	transition-duration: 0.2s;
-	box-shadow: 0 0 10px 3px #b0e0ee;
+	box-shadow: 0 0 15px 8px #b0e0ee;
 	color: black;
 }
 .register-button
 {
+	border: 1px solid white;
 	position: relative;
 	display: inline-block;
 	padding: 3.5%;
-	color: #2196f3;
+	color: white;
 	text-transform: uppercase;
 	letter-spacing: 4px;
 	text-decoration: none;
 	overflow: hidden;
 	transition: 0.1s;
 	width: 90%;
-	color: #a9a9a9;
+	color: white;
 	border-radius: 5px;
 	background-color: rgba(255,255,255,0.2);
 }
 
 .register-button:visited
 {
-	color: gray;
+	color: white;
 
 }
 
