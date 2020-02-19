@@ -120,8 +120,8 @@ if($_POST &&  isset($_POST['login']))
 
 				<h3 style="color: white; letter-spacing: 4px;">Get Started</h3>
 				<br>
-				<input type="Text" name="Username" id="Uname_log" placeholder="Username" class="inputbody" required autofocus>
-				<input type="password" name="passwd" placeholder="Password" class="inputbody" autofocus required><br>
+				<input type="Text" name="Username" id="Uname_log" placeholder="Username" class="inputbody" autofocus>
+				<input type="password" name="passwd" placeholder="Password" class="inputbody" autofocus><br>
 				<div style="display: flex; justify-content: space-around;">
 					<div>
 						<input type="checkbox" name="rem1" value="Remember Me" class="check1">
