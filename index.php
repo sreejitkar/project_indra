@@ -39,7 +39,9 @@ if($_POST &&  isset($_POST['login']))
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<meta http-equiv="Access-Control-Allow-Origin" content="*">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>	
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="JS/validate.js"></script>
 	</script>
 	<meta name=”viewport” content=”width=device-width, initial-scale="1.0">
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -114,7 +116,7 @@ if($_POST &&  isset($_POST['login']))
 	<div id="login-panel">
 		<center>
 
-			<form action="" method="post">
+			<form action="" method="post" name="login" onsubmit="return logvalidate();">
 
 				<h3 style="color: white; letter-spacing: 4px;">Get Started</h3>
 				<br>
