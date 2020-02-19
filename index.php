@@ -37,10 +37,32 @@ if($_POST &&  isset($_POST['login']))
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
 	</script>
 	<meta name=”viewport” content=”width=device-width, initial-scale="1.0">
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<script>
+		$('#buttonlink1').click(function(){
+			$.ajax({
+				url: 'https://api.thingspeak.com/update?api_key=9VV7F5VS2UX3JF9G&field1=1',
+				type: 'GET',
+				success:function(){
+					console.log("success");
+				}
+			});
+		});
+		$('#buttonlink2').on("click",function(){
+			$.ajax({
+				url: 'https://api.thingspeak.com/update?api_key=9VV7F5VS2UX3JF9G&field1=0',
+				type: 'GET',
+				success:function(){
+					console.log("success");
+				}
+			});
+		});
+	</script>
 </head>
 <body>
 	<?php $name1=$name2=$pword1=$pword2="";?>
@@ -194,8 +216,8 @@ if($_POST &&  isset($_POST['login']))
 -->
 <button class="hvr-float-shadow"><h4>Learn More</h4></button><br>
 <FORM >
-<button id="buttonlink1" name="button1" onclick="https://api.thingspeak.com/update?api_key=9VV7F5VS2UX3JF9G&field1=1"><h4>ON</h4></button>
-<button id="buttonlink2" name="button2" onclick="https://api.thingspeak.com/update?api_key=9VV7F5VS2UX3JF9G&field1=0"><h4>OFF</h4></button>
+<button id="buttonlink1" name="button1"><h4>ON</h4></button>
+<button id="buttonlink2" name="button2"><h4>OFF</h4></button>
 </FORM>
 </div>
 </div>

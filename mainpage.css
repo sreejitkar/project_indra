@@ -442,6 +442,7 @@ html {
 /*******************************LearnBUt********************/
 /* Float Shadow */
 .hvr-float-shadow {
+	position: fixed;
   display: inline-flex;
   justify-content: center;
   vertical-align: middle;
