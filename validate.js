@@ -16,12 +16,18 @@ function logvalidate()
 function regvalidate()
 { 
     var username = document.register.Username.value;
-    var email = document.register.email.value; 
+    var fname = document.register.fname.value;
+    var email = document.register.email.value;
     var password = document.register.passwd.value;
     var cpassword= document.register.cpasswd.value;
     if (username==null || username=="")
     { 
     swal("Username can't be blank","","warning"); 
+    return false; 
+    }
+    else if (fname==null || fname=="")
+    { 
+    swal("Fullname can't be blank","","warning"); 
     return false; 
     }
     else if (email==null || email=="")
