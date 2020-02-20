@@ -1,172 +1,193 @@
-.*{
-	outline: none;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 	font-family: "Segoe UI";
-
-}
-
-*:focus{
 	outline: none;
+
 }
-.headerdiv{
+
+body {
+	font-family: 'Segoe';
+	overflow: hidden;
+/*	background-color: #5C6BC0;
+*/}
+
+
+.bodydiv{
+	position: relative;
+	overflow: hidden; 
 	display: inline-flex;
-	justify-content: space-around;
-	padding-bottom: 100/px;
+	justify-content: center; 
+	align-items: center; 
+	width: 100%;
+	height: 100vh;
+	margin: 0px;
+	padding: 0px;
 }
 
-.mytext{
-	font-family: "Segoe UI";
+html {
+	font-size: 3rem;
+	scroll-behavior: smooth;
 }
 
-.head{
-	position: sticky;
+/******************** BACKGROUND VIDEO *******************/
+
+.video-container
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: -10;
+}
+.video-overlay
+{
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.7);
+	
+}
+
+/********************NAVIGATION BAR**********************/
+
+.navbar-scroll{
+	background-color: transparent;
+	position: fixed; 
+	top: 0;
+	width: 100%;
+	transition-duration: 0.4s;
+	display: flex;
+	justify-content: space-between;
+}
+
+.Nav_Bar_Body{
+	
 	list-style: none;
 	overflow: hidden;
-	top: 0;
-	background-color: #bbf0f3;
-	background-image: linear-gradient(195deg, #bbf0f3 0%, #f6d285 74%); 
-	color: #ffffff;
-	margin: 0;
-	display: block;
+	color: white;
+	display: flex;
 	padding: 0px;
+	width: 50%;
+	margin-bottom: 0px;
 }
 
-.logsign{
-	color: white;
-	background-color: transparent;
-	border:none;
-	display: inline-block;
-	padding: 20px 20px;
-	margin: 0px;
-	height: 100%;
-	width: 100%;
-	color: black;	
-}
-
-.logsign:hover{	
-	transition-duration: 0.2s;
-	cursor: pointer;
-	transform: scale(1.05);
-	color: white;
-}
-
-#Personal-front:hover{
-	display: none;
-}
-
-.headerdiv{
-	padding-right: 10px;
-	padding-bottom: 100px;
-}
-
-.headline{
-	color: white;
-}
-
-.innerdiv{
-	width: 40%;
-	text-align: justify;
-	padding: 20px;
-	border: 1px solid white;
-	margin: 2px;
-	border-radius: 20px;
-	z-index: 2;
-	border-width: medium;
-	transition-duration: 0.2s;
-	border-color: none;
-	font-size: 110%;
-	background-color: transparent;
-}	
-
-.innerdiv:hover {
-	transform: scale(1.05);
-	box-shadow: 0 0 15px 15px #F1ECE9;
-	cursor: pointer;
-	color: black;
-	border-color: #F1ECE9;
-}
-
-.innerdiv:focus{
-	background-color: red;
-	height: 100%;
-}
-.fieldspan{
-	font-size: 190%;
-	padding: 30px;
-}
-
-.fieldspan:hover{
-	text-shadow: 10px greens;
-
-}
-
-.bg-image {
-  /* The image used */
-  background-image: url('blue-universe-956981.jpg');
-
-  /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.headcontain {
+.Nav_Button{
 	font-family: font92720;
-  background-color: transparent;
-  height: 100px;
-  width: 280px;
-  padding: 0px;
+	color: white;
+	background-color: transparent;
+	text-align: center;
+	margin-top:0;
+	padding: 3%;
+	width: 100%;
+	transition: 0.1s;
+	font-size: 0.5rem;
+	margin-left: auto;
+	margin-right: auto;
+	border:none;
+	transition-duration: 0.2s
 
 }
 
-.headcontain-inner {
+.Nav_Button_Link:visited
+{
+	color: rgb(0,168,246);
+}
+
+
+.Nav_Button:hover{
+
+	padding-bottom: 2%;
+	box-shadow: 2px;
+	cursor: pointer;
+	color: rgb(0,168,246);
+	transform: scale(1.06);
+}
+
+
+.Nav_Button_Link:hover 
+{
+	color: rgb(0,168,246);
+}
+
+.Nav_Button_Link:active
+{
+	color: rgb(0,168,246);
+}
+
+.navbar-logo{
+	width: 6%;
+	transition-duration: 0.2s;
+	align-self: flex-start;
+/*	background-color: white;
+*/
+}
+.navbar-logo:hover{
+	transform: scale(1.3);
+}
+/***********After Scroll***************/
+
+.navbar-logo.size-change{
+	width: 7%;
+}
+.navbar-scroll.color-change{
+	background-color: rgb(0,0,0);
+	height: 12%;
+}
+.Nav_Button.margin-change{
+	margin-top:1%;
+	margin-bottom: 1%;
+	transition-duration: 0.2s
+}
+
+/*****************UNDERLINE NAVIGATION BAR CONTENT****************************/
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.4s;
-  transform-style: preserve-3d;
+  overflow: hidden;
 }
-
-.headcontain:hover .headcontain-inner {
-	transition-duration: 0.4s;
-  transform: rotateY(180deg);
-  	background-color: #3F51B5;
-}
-
-.headcontain-front, .headcontain-back {
+.hvr-underline-from-center:before {
+  content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background-color: transparent;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: rgb(0,168,246);
+  height: 1px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
 }
 
-.headcontain-front {
-  background-color: transparent;
-  color: black;
-/*  border: 2px solid black;
-*/  padding-top: 10px;
-  border-width: 10px;
+/****************I_FRAMES*******************************/
+.frame
+{
+	border-radius: 2%;
+	margin:1%;
 }
-
-.headcontain-back {
-	transition-duration: 0.3s;
-	padding: 0px;
-  background-color: transparent;
-  color: white;
-  transform: rotateY(180deg);
-
-}
+/**************** FOOTER ******************************/
 
 .footer{
-	background-color: #344955;
+	background-color: black;
 	bottom: 0;
 	width: 100%;
 	padding-top: 30px;
@@ -180,11 +201,11 @@
 }
 
 .footermid{
-padding: 30px;
-display: flex;
-text-align: center;
-flex-direction:row; 
-justify-content: space-around;
+	padding: 30px;
+	display: flex;
+	text-align: center;
+	flex-direction:row; 
+	justify-content: space-around;
 }
 
 
@@ -198,10 +219,14 @@ justify-content: space-around;
 .footermid-el:hover{
 	cursor: pointer;
 	transform: scale(1.1);
+
+	.footer-label:hover{
+		color: green;
+	}
 }
 
 .imgclass{
-	padding: 30px;
+	padding: 15%;
 	margin: 0px;
 	width: 50%;
 	height: 50%;
@@ -213,20 +238,19 @@ justify-content: space-around;
 	cursor: pointer;
 }	
 .footerend{
-display: flex;
-text-align: center;
-flex-direction:row; 
-justify-content: space-around;
-width:10%;
+	display: flex;
+	text-align: center;
+	flex-direction:row; 
+	justify-content: space-around;
+	width:10%;
 }
 
 .footerinput{
-	padding: 15px;
+	padding: 2.5%;
 	border-radius: 40px 0px 0px 40px; 
-	width: 60%;
-	border-style: solid;
+	width: 70%;
+	border: 2px solid rgb(0,168,246);
 	transition-duration: 0.3s;
-	color: 
 }
 
 .footerinput:hover{
@@ -238,17 +262,20 @@ width:10%;
 	color: black;
 }
 .footerbut{
+	padding: 2.5%;
 	width: 20%;
-	padding: 17px;
-	border-width: 3px;
-	color: black;
+	color: rgb(0,168,246);
 	border-radius: 0px 40px 40px 0px; 
-	border-style: none; 
-	background-color: #faab30;
+	border:3px solid rgb(0,168,246);
+	background-color: transparent;
 	transition-duration: 0.2s;
 }
-
+.footer-label{
+	color: white;
+	font-size: 200%; 
+}
 .footerbut:hover{
-
+	color: white;
+	background-color: rgb(0,168,246);
 
 }
