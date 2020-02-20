@@ -38,7 +38,14 @@ if($_POST &&  isset($_POST['login']))
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<<<<<<< HEAD
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+=======
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>	
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="JS/validate.js"></script>
+>>>>>>> f1178f7b1363b407f0b6ecdd8134d7e1bdd66353
 	</script>
 	<meta name=”viewport” content=”width=device-width, initial-scale="1.0">
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -75,7 +82,35 @@ if($_POST &&  isset($_POST['login']))
 				<li class="Nav_Button hvr-underline-from-center">
 					<a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
 
+<<<<<<< HEAD
 						<h4>Why Us?</h4>
+=======
+<div class="container1">
+	<div id="login-panel">
+		<center>
+
+			<form action="" method="post" name="login" onsubmit="return logvalidate();">
+
+				<h3 style="color: white; letter-spacing: 4px;">Get Started</h3>
+				<br>
+				<input type="Text" name="Username" id="Uname_log" placeholder="Username" class="inputbody" autofocus>
+				<input type="password" name="passwd" placeholder="Password" class="inputbody" autofocus><br>
+				<div style="display: flex; justify-content: space-around;">
+					<div>
+						<input type="checkbox" name="rem1" value="Remember Me" class="check1">
+						<label>Remember Me</label>
+					</div>
+					<a href="#forgot" >Forgot Password?</a></div>
+					<br><br>
+					<input type="submit" name="login" value="LOGIN" class="submitbut">
+					<br><h5>OR</h5><br>
+					<a href="signup.php" class="register-button" style="text-decoration: none;" >		
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						Register
+>>>>>>> f1178f7b1363b407f0b6ecdd8134d7e1bdd66353
 					</a>
 				</li>
 				<li class="Nav_Button hvr-underline-from-center">
