@@ -36,8 +36,14 @@ $sql_e = "SELECT * FROM users WHERE Email='$email'";
 $res_u = mysqli_query($conn, $sql_u);
 $res_e = mysqli_query($conn, $sql_e);
 if (mysqli_num_rows($res_u) > 0 || mysqli_num_rows($res_e) > 0) {
-  	  $name_error = "Sorry... username or email already taken";
-      echo $name_error;   
+//    $_SESSION['name_error']="Sorry... username or email already taken";
+    echo "<html>";
+    echo "<script src='https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js'></script>";
+    echo "<body>";
+    echo "<script>swal('Username already taken','','warning')</script>";
+    echo "</body>";
+    echo "</html>";
+    //header('location: signup.php');
 }
 else
 {
@@ -49,6 +55,7 @@ else
             $_SESSION['uname']=$uname;
             $_SESSION['fname']=$fname;
             $_SESSION['email']=$email;
+            $_SESSION['logged_in']="Active";
             //$_SESSION['status']='authorize';
             /*mkdir("userimg/$uname");
             if(isset($_POST['Register']))

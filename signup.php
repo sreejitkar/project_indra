@@ -1,3 +1,8 @@
+<?php
+/*$name_error='';
+session_start();
+$name_error=$_SESSION['name_error'];*/
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,9 +11,21 @@
 	<meta name=”viewport” content=”width=device-width, initial-scale="1.0">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 	<script src="JS/validate.js"></script>
+    <!--<script>
+        function namecheck(){
+            var name_errror = "<?php echo $name_error ?>";
+            if(name_errror=='Sorry... username or email already taken'){
+                swal("Username is already taken","","warning");
+                <?php
+                    unset($_SESSION['name_error']);  
+                    session_destroy();
+                ?>
+            }
+        }
+    </script>-->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
-<body>
+<body">
 	<div class="bodydiv">
 		<img src="logo123.png" style="width: 7%;">
 		<center>

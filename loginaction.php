@@ -34,10 +34,16 @@ if (mysqli_num_rows($result) > 0) {
         $_SESSION['uname']=$uname;
         $_SESSION['fname']=$fname;
         $_SESSION['email']=$email;
+        $_SESSION['logged_in']='Active';
         header('location: profile.php');
     }
 } else {
-    header('location: error.php');
+    echo "<html>";
+    echo "<script src='https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js'></script>";
+    echo "<body>";
+    echo "<script>swal('Username or password is incorrect','','warning')</script>";
+    echo "</body>";
+    echo "</html>";
 }
 
 mysqli_close($conn);

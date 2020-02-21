@@ -7,9 +7,15 @@ $result= new Users();
 $result->Confirm_User();*/
 
 session_start();
-$fname=$_SESSION['fname'];
-$email=$_SESSION['email'];
-$uname=$_SESSION['uname'];
+if($_SESSION['logged_in']!='Active'){
+    header("Location: index.php"); 
+}
+else{
+    $fname=$_SESSION['fname'];
+    $email=$_SESSION['email'];
+    $uname=$_SESSION['uname'];
+
+}
 
 ?>
 <!DOCTYPE html>
@@ -70,7 +76,7 @@ $uname=$_SESSION['uname'];
 					</a>
 				</li>
 				<li class="Nav_Button hvr-underline-from-center">
-					<a href="index.php?status=loggedout" class="Nav_Button_Link" style="text-decoration: none;">
+					<a href="logout.php" class="Nav_Button_Link" style="text-decoration: none;">
 						<h4>Logout</h4>
 					</a>
 				</li>
