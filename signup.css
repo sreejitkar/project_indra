@@ -141,7 +141,8 @@ padding-bottom: 10%;*/
 	padding: 5%;
 	background-color: rgba(256,256,256,0.2);
 	color: #a9a9a9;
-	margin: 2%;
+	margin-top: 5%;
+	margin-bottom: 5%;
 	border:rgba(256,256,256,0.2);
 	transition-duration: 0.2s;
 }

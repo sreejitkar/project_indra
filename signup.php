@@ -6,7 +6,6 @@
 	<meta name=”viewport” content=”width=device-width, initial-scale="1.0">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 	<script src="validate.js"></script>
-	<script src="wifithingspeak.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
@@ -19,11 +18,9 @@
 <!-- 						<div style="display: flex;"> -->
 							<img src="photo-1541701494587-cb58502866ab.jpeg" class="signup-panel-design-logo" style="z-index: 10;">
 <!-- 						</div> -->
-							<div class="signup-panel-design-text"><h3 class="signup-panel-design-text-heading"><span style="color: rgb(0,168,246); font-family: 'AnmolHindi';">e</span>NDRA</h3><br><h3>energy at your fingertips.</h3></div>
+							<div class="signup-panel-design-text"><h3 class="signup-panel-design-text-heading"><span style="color: rgb(0,168,246); font-family: 'AnmolHindi'; font-size: 110%; ">e</span>NDRA</h3><br><h3>energy at your fingertips.</h3></div>
 					</div>
 					<div class="signup-panel-form">
-						<div class="signup-panel-form-div1"><img src="roland-larsson-m2De0QR_tWo-unsplash.jpg" id="profilepic"></div>
-						<div class="signup-panel-form-div2">
 						<form action="" method="post" onsubmit="return regvalidate();" name="register">
 
 
@@ -43,7 +40,6 @@
 					<br>
 <input type="submit" name="Register" value="REGISTER" class="submitbut">
 				</form>
-			</div>
 			</div>
 		</div>
 	</div>

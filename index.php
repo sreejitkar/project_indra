@@ -1,4 +1,4 @@
- 
+
 <?php 
 
 session_start();
@@ -38,31 +38,15 @@ if($_POST &&  isset($_POST['login']))
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<meta http-equiv="Access-Control-Allow-Origin" content="*">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+=======
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>	
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="JS/validate.js"></script>
 	</script>
 	<meta name=”viewport” content=”width=device-width, initial-scale="1.0">
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
-	<script>
-		$('#buttonlink1').click(function(){
-			$.ajax({
-				url: 'https://api.thingspeak.com/update?api_key=9VV7F5VS2UX3JF9G&field1=1',
-				type: 'GET',
-				success:function(){
-					console.log("success");
-				}
-			});
-		});
-		$('#buttonlink2').on("click",function(){
-			$.ajax({
-				url: 'https://api.thingspeak.com/update?api_key=9VV7F5VS2UX3JF9G&field1=0',
-				type: 'GET',
-				success:function(){
-					console.log("success");
-				}
-			});
-		});
-	</script>
 </head>
 <body>
 	<?php $name1=$name2=$pword1=$pword2="";?>
@@ -89,109 +73,107 @@ if($_POST &&  isset($_POST['login']))
 		<div class="navbar-scroll">
 			<img src="logo123.png" class="navbar-logo">
 			<ul class="Nav_Bar_Body">
-<!-- 			<li class="Nav_Button" style="display: flex;float: left;"><img src="logo123.png">
-</li> -->
-<li class="Nav_Button hvr-underline-from-center"><a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
-	<h4>About</h4></a>
-</li>
-<li class="Nav_Button hvr-underline-from-center">
-	<a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
 
-		<h4>Why Us?</h4>
-	</a>
-</li>
-<li class="Nav_Button hvr-underline-from-center">
-	<a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
-		<h4>Help</h4>
-	</a>
-</li>
+				<li class="Nav_Button hvr-underline-from-center"><a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
+					<h4>About</h4></a>
+				</li>
+				<li class="Nav_Button hvr-underline-from-center">
+					<a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
 
-</ul>
-</div>
-
-
-<div class="container1">
-	<div id="login-panel">
-		<center>
-
-			<form action="" method="post">
-
-				<h3 style="color: white; letter-spacing: 4px;">Get Started</h3>
-				<br>
-				<input type="Text" name="Username" id="Uname_log" placeholder="Username" class="inputbody" required autofocus>
-				<input type="password" name="passwd" placeholder="Password" class="inputbody" autofocus required><br>
-				<div style="display: flex; justify-content: space-around;">
-					<div>
-						<input type="checkbox" name="rem1" value="Remember Me" class="check1">
-						<label>Remember Me</label>
-					</div>
-					<a href="#forgot" >Forgot Password?</a></div>
-					<br><br>
-					<input type="submit" name="login" value="LOGIN" class="submitbut">
-					<br><h5>OR</h5><br>
-					<a href="signup.php" class="register-button" style="text-decoration: none;" >		
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						Register
+						<h4>Why Us?</h4>
+				</li>
+				<li class="Nav_Button hvr-underline-from-center">
+					<a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
+						<h4>Help</h4>
 					</a>
+				</li>
 
-				</form>
-			</center>
-
+			</ul>
 		</div>
-		<script type="text/javascript">
-			var TxtRotate = function(el, toRotate, period) {
-				this.toRotate = toRotate;
-				this.el = el;
-				this.loopNum = 0;
-				this.period = parseInt(period, 10) || 2000;
-				this.txt = '';
-				this.tick();
-				this.isDeleting = false;
-			};
 
-			TxtRotate.prototype.tick = function() {
-				var i = this.loopNum % this.toRotate.length;
-				var fullTxt = this.toRotate[i];
 
-				if (this.isDeleting) {
-					this.txt = fullTxt.substring(0, this.txt.length - 1);
-				} else {
-					this.txt = fullTxt.substring(0, this.txt.length + 1);
-				}
+		<div class="container1">
+			<div id="login-panel">
+				<center>
 
-				this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+					<form action="" method="post" name="login" onsubmit="return logvalidate();">
 
-				var that = this;
-				var delta = 300 - Math.random() * 100;
+						<h3 style="color: white; letter-spacing: 4px;">Get Started</h3>
+						<br>
+						<input type="Text" name="Username" id="Uname_log" placeholder="Username" class="inputbody" autofocus>
+						<input type="password" name="passwd" placeholder="Password" class="inputbody" autofocus><br>
+						<div style="display: flex; justify-content: space-around;">
+							<div>
+								<input type="checkbox" name="rem1" value="Remember Me" class="check1">
+								<label>Remember Me</label>
+							</div>
+							<a href="#forgot" >Forgot Password?</a></div>
+							<br><br>
+							<input type="submit" name="login" value="LOGIN" class="submitbut">
+							<br><h5>OR</h5><br>
+							<a href="signup.php" class="register-button" style="text-decoration: none;" >		
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								Register
+							</a>
 
-				if (this.isDeleting) { delta /= 2; }
+						</form>
+					</center>
 
-				if (!this.isDeleting && this.txt === fullTxt) {
-					delta = this.period;
-					this.isDeleting = true;
-				} else if (this.isDeleting && this.txt === '') {
-					this.isDeleting = false;
-					this.loopNum++;
-					delta = 500;
-				}
+				</div>
+				<script type="text/javascript">
+					var TxtRotate = function(el, toRotate, period) {
+						this.toRotate = toRotate;
+						this.el = el;
+						this.loopNum = 0;
+						this.period = parseInt(period, 10) || 2000;
+						this.txt = '';
+						this.tick();
+						this.isDeleting = false;
+					};
 
-				setTimeout(function() {
-					that.tick();
-				}, delta);
-			};
+					TxtRotate.prototype.tick = function() {
+						var i = this.loopNum % this.toRotate.length;
+						var fullTxt = this.toRotate[i];
 
-			window.onload = function() {
-				var elements = document.getElementsByClassName('txt-rotate');
-				for (var i=0; i<elements.length; i++) {
-					var toRotate = elements[i].getAttribute('data-rotate');
-					var period = elements[i].getAttribute('data-period');
-					if (toRotate) {
-						new TxtRotate(elements[i], JSON.parse(toRotate), period);
-					}
-				}
+						if (this.isDeleting) {
+							this.txt = fullTxt.substring(0, this.txt.length - 1);
+						} else {
+							this.txt = fullTxt.substring(0, this.txt.length + 1);
+						}
+
+						this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+						var that = this;
+						var delta = 300 - Math.random() * 100;
+
+						if (this.isDeleting) { delta /= 2; }
+
+						if (!this.isDeleting && this.txt === fullTxt) {
+							delta = this.period;
+							this.isDeleting = true;
+						} else if (this.isDeleting && this.txt === '') {
+							this.isDeleting = false;
+							this.loopNum++;
+							delta = 500;
+						}
+
+						setTimeout(function() {
+							that.tick();
+						}, delta);
+					};
+
+					window.onload = function() {
+						var elements = document.getElementsByClassName('txt-rotate');
+						for (var i=0; i<elements.length; i++) {
+							var toRotate = elements[i].getAttribute('data-rotate');
+							var period = elements[i].getAttribute('data-period');
+							if (toRotate) {
+								new TxtRotate(elements[i], JSON.parse(toRotate), period);
+							}
+						}
   // INJECT CSS
   var css = document.createElement("style");
   css.type = "text/css";
@@ -214,11 +196,69 @@ if($_POST &&  isset($_POST['login']))
 	Inspire the iNDRA in you
 
 -->
+<script>
+	function hideapikey() {
+		var x = document.getElementById("ts-api-key");
+		if (x.type === "password") {
+			x.type = "text";
+		} else {
+			x.type = "password";
+		}
+	}
+	function hidechannelid() {
+		var x = document.getElementById("ts-channel-id");
+		if (x.type === "password") {
+			x.type = "text";
+		} else {
+			x.type = "password";
+		}
+	}
+
+	document.getElementById('light-on').addEventListener('click', function() {
+		var ts_api_key = document.getElementById('ts-api-key').value;
+		var url = "http://api.thingspeak.com/update?api_key="+ ts_api_key + "&field1=1"
+		$.getJSON(url, function(data) {
+			console.log(data);
+		});
+	});
+
+	document.getElementById('light-off').addEventListener('click', function() {
+		var ts_api_key = document.getElementById('ts-api-key').value;
+		var url = "http://api.thingspeak.com/update?api_key="+ ts_api_key + "&field1=0"
+		$.getJSON(url, function(data) {
+			console.log(data);
+		});
+	});
+
+	setInterval(function() {
+			// Call a function repetatively with 15 Second interval
+			getThingSpeakLightState();
+		}, 1000);
+
+	function getThingSpeakLightState() {
+		var ts_channel_id = document.getElementById('ts-channel-id').value;
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				var myObj = JSON.parse(this.responseText);
+				if (myObj.field1 == 1) {
+					document.getElementById("LIGHTState").innerHTML = "ON";
+				}
+				else {
+					document.getElementById("LIGHTState").innerHTML = "OFF";
+				}
+			}
+		};
+		xhttp.open("GET", "https://api.thingspeak.com/channels/" + ts_channel_id + "/fields/1/last.json", true);
+		xhttp.send();
+	}
+</script>
+
+
+
+
+
 <button class="hvr-float-shadow"><h4>Learn More</h4></button><br>
-<FORM >
-<button id="buttonlink1" name="button1"><h4>ON</h4></button>
-<button id="buttonlink2" name="button2"><h4>OFF</h4></button>
-</FORM>
 </div>
 </div>
 <!-- <script>

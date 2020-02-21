@@ -1,124 +1,110 @@
 <?php
 
- require_once "classes/Users.php";
+//require_once "classes/Users.php";
 
- $result= new Users();
+//$result= new Users();
 
-  $result->Confirm_User();
+//$result->Confirm_User();
 
 ?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Profile</title>
 	<link rel="stylesheet" type="text/css" href="profile.css">
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body style="background-color: #bbf0f3;
-background-image: linear-gradient(315deg, #bbf0f3 0%, #f6d285 74%); background-attachment: fixed;">
-	<div class="bgimage"></div>
+<body>
+
+
 	<script type="text/javascript">
-		function bringcenter(divname){
-			var i;
-			var x=document.getElementsByClassName("innerdiv");
-			for(i=0;i<x.length;i++){
-				x[i].style.display="none";
+		$(window).scroll(function() {
+			if ($(document).scrollTop() > 100) {
+				$('.navbar-scroll').addClass('color-change');
+				$('.navbar-logo').addClass('size-change');
+				$('.Nav_Button').addClass('margin-change');
+				
+			} else {
+				$('.navbar-scroll').removeClass('color-change');
+				$('.navbar-logo').removeClass('size-change');
+				$('.Nav_Button').removeClass('margin-change');
+				
 			}
-			document.getElementById(divname).style.display="inline-block";
-			document.getElementById(divname).style.width="50%";
-		}
-		function fadein(divname){
-			var i;
-			var x=document.getElementsByClassName("div1");
-			for(i=0;i<x.length;i++){
-				x[i].style.display="none";
-			}
-			document.getElementById(divname).style.display="inline-block";
-
-			function checkEvt(){
-    var evTypep=window.performance.getEntriesByType("navigation")[0].type;
-       if (evTypep=='reload'){
-         window.location.replace("index.php");
-       }
-      
-}
-checkEvt();
-			
-		}			
+		});
 	</script>
-	<ul class="head" style="z-index: 3;">
-		<li style="float: left;">
-			<div class="headcontain" style="float: left;">
-				<div class="headcontain-inner">
-					<div class="headcontain-front">
-						<button class="logsign" style="float: left; width: 90%;"><h3>S M A R T L Y S E R</h3></button>
-					</div>
-					<div class="headcontain-back">
-						<button class="logsign" style="width: 90%; float: left; color: white;"><h5>A complete solution for all your energy needs!</h5></button></li>
-					</div>
-				</div>
-			</div>		
-			<li style="float: right;">
-				<div class="headcontain">
-					<div class="headcontain-inner">
-						<div class="headcontain-front" style="float: right; width: 90%;">
-							<button class="logsign"><h4><?php echo $_SESSION['fname']." ".$_SESSION['lname'];?></h4></button>
-						</div>
-						<div class="headcontain-back">
-							<!-- <button class="logsign" style="width: 90%; float: right; color: white;"  name="logout" id='logout' onclick="logout()">Log Out</h4></button> -->
-							<a class="logsign" style="text-decoration: none; font-size: 150%;" href="index.php?status=loggedout">Log Out</a>
-						</li>
-					</div>
-				</div>
-			</div>
-		</li>
+
+	<div class="bodydiv">
 
 
-		</ul>
+		<div class="navbar-scroll">
 
-		<br><br><br><br>	
-		<div class="headerdiv" style="width: 100%;">
-			<div class="innerdiv mytext" id="Personal">
-				<h1 class="headline" style="font-size: 400%">Personal</h1>
-				<hr>
-				<span class="fieldspan">Name : <?php echo $_SESSION['fname']." ".$_SESSION['lname'];?></span> <br><br>
-				<span class="fieldspan">User ID</span><br><br>
-				<span class="fieldspan">Email</span><br>
-				<span class="fieldspan"></span>
+			<img src="logo123.png" class="navbar-logo">
+			<ul class="Nav_Bar_Body">
+
+				<li class="Nav_Button hvr-underline-from-center"><a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
+					<h4>About</h4></a>
+				</li>
+				<li class="Nav_Button hvr-underline-from-center">
+					<a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
+
+						<h4>Why Us?</h4>
+					</a>
+				</li>
+				<li class="Nav_Button hvr-underline-from-center">
+					<a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
+						<h4>Logout</h4>
+					</a>
+				</li>
+
+			</ul>
 
 
-			</div>
-			<div class="innerdiv mytext" id="Devices">
-				<h1 class="headline" style="font-size: 400%">Devices</h1>
-				<hr>
-				<center>
-				<div style="display: inline-flex; justify-content:space-between;">
-
-				<div class="innerdiv" tabindex="1" style="margin: 10px;"> 
-					<h1>Hello Device 1</h1>
-				</div>
-				<div class="innerdiv" tabindex="2" style="margin: 10px;">
-					<h1>Hello Device 2</h1>
-				</div>
-				<div class="innerdiv" tabindex="1" style="margin: 10px;"> 
-					<h1>Hello Device 3</h1>
-				</div>
-			</div>
-		</center>
-			</div>
 		</div>
+
+		<div style=" margin-top: 8%; margin-bottom: 3%">
+
+			<div style="display: flex;"><!-- VOLTAGE -->
+			<iframe  class="frame" width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/995714/charts/1?bgcolor=%23daf1f7&color=%2300c4f8&dynamic=true&results=60&title=Voltage&type=spline"></iframe>
+
+			<iframe   class="frame" width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/995714/widgets/151401"></iframe>
+			</div>
+			<div style="display: flex;">
+			<!-- AMPERE -->
+			<iframe class="frame" width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/995714/charts/2?bgcolor=%23daf1f7&color=%2300c4f8&dynamic=true&results=60&title=Ampere&type=line"></iframe>
+
+			<iframe   class="frame"  width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/995714/widgets/151404"></iframe>
+			</div>
+			<div style="display: flex;">
+			<!-- POWER -->
+			<iframe class="frame" width="50%" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/995714/charts/3?bgcolor=%23daf1f7&color=%2300c4f8&dynamic=true&results=60&title=Power&type=line"></iframe>
+
+			<iframe   class="frame"  width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/995714/widgets/151414"></iframe>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="video-container">
+
+		<div class="video-overlay"></div>
+		<video   loop muted autoplay >
+			<source src="video1.mp4" type="video/mp4">
+			</video>
+		</div>
+
+
 		<div class="footer">
 			<center>
 				<div class="footermid">
 					<div class="footermid-el">
 						<li style="list-style: none;">
-							<ul class="footer-list-el"><h3><b>THE TEAM</b></h3></ul>
+							<ul class="footer-list-el"><h3 class="footer-label"><b>THE TEAM</b></h3></ul>
 							<br>
 							<ul class="footer-list-el">Know us</ul>
 							<ul class="footer-list-el">Members</ul>
@@ -128,7 +114,7 @@ checkEvt();
 					</div>
 					<div class="footermid-el">
 						<li style="list-style: none;">
-							<ul class="footer-list-el"><h3><b>HELP</b></h3></ul>
+							<ul class="footer-list-el"><h3 class="footer-label"><b>HELP</b></h3></ul>
 							<br>
 							<ul class="footer-list-el">Documentation</ul>
 							<ul class="footer-list-el">Read Logs</ul>
@@ -138,7 +124,7 @@ checkEvt();
 					</div>
 					<div class="footermid-el">
 						<li style="list-style: none;">
-							<ul class="footer-list-el"><h3><b>OUR SERVICES</b></h3></ul>
+							<ul class="footer-list-el"><h3 class="footer-label"><b>OUR SERVICES</b></h3></ul>
 							<br>
 							<ul class="footer-list-el">Energy Solutions</ul>
 							<ul class="footer-list-el">Remote Environment</ul>
@@ -159,7 +145,7 @@ checkEvt();
 					<br>
 					<input type="email" name="contact" placeholder="name @example.com" class="footerinput"><input type="submit" value="GO!" class="footerbut" placeholder="Ping!">
 					<br><br>
-					<h5>s m a r t y l s e r 	&copy;</h5>
+					<h5>indra &copy;</h5>
 					<h7>a place for all your enrgy needs and solutions.</h7>
 				</div>
 			</center>
