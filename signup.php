@@ -5,7 +5,7 @@
 	<title>Sign Up</title>
 	<meta name=”viewport” content=”width=device-width, initial-scale="1.0">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
-	<script src="validate.js"></script>
+	<script src="JS/validate.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
@@ -21,7 +21,7 @@
 							<div class="signup-panel-design-text"><h3 class="signup-panel-design-text-heading"><span style="color: rgb(0,168,246); font-family: 'AnmolHindi'; font-size: 110%; ">e</span>NDRA</h3><br><h3>energy at your fingertips.</h3></div>
 					</div>
 					<div class="signup-panel-form">
-						<form action="" method="post" onsubmit="return regvalidate();" name="register">
+						<form action="regaction.php" method="post" onsubmit="return regvalidate();" name="register">
 
 
 							<!-- <h2 style="color: white; letter-spacing: 2px; font-size: 180%;">Sign up To <span style="color: rgb(0,168,246);">iNDRA</span></h2> -->

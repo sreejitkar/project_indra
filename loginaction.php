@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -20,21 +21,23 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-echo "Connected successfully<br>Uname: ".$uname."<br>Password: ".$pass;
-$sql = "SELECT id, uname, password FROM users WHERE Uname='$uname' AND Password = '$pass'";
+//echo "Connected successfully<br>Uname: ".$uname."<br>Password: ".$pass;
+$sql = "SELECT * FROM users WHERE Uname='$uname' AND Password = '$pass'";
 $result = mysqli_query($conn, $sql);
-echo "<br>".$sql;
+//echo "<br>".$sql;
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-       // echo "<br>id: " . $row["id"]. " <br>Retrieved Userame: " . $row["uname"]. "<br>Retrieved Password: " . $row["password"]. "<br>";
-        header('location: welcome.php');
+        $fname=$row["Fname"];
+        $email=$row["Email"];
+       //echo "<br>id: " . $row["ID"]. " <br>Retrieved Userame: " . $row["Uname"]. "<br>Retrieved Password: " . $row["Password"]. "<br>".$row["Fname"]."<br>".$row["Email"];
+        $_SESSION['uname']=$uname;
+        $_SESSION['fname']=$fname;
+        $_SESSION['email']=$email;
+        header('location: profile.php');
     }
 } else {
-    echo "<br>0 results<br>";
-    echo $uname;
-    echo "<br>$pass";
-    header('Refresh:1;url=http://localhost/project_indra/error.php');
+    header('location: error.php');
 }
 
 mysqli_close($conn);

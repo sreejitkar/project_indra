@@ -1,31 +1,22 @@
 
 <?php 
 
-session_start();
-
-require "hello.php";
+/*require "hello.php";
 
 $ret= new hello();
 
 //User to logout
 
-if(isset($_GET['status']) && $_GET['status']=='loggedout')
-{
-	$ret->Logout();
-}
+// if(isset($_GET['status']) && $_GET['status']=='loggedout')
+// {
+// 	$ret->Logout();
+// }
 
-if(isset($_GET['status']) && $_GET['status']=='error')
-{
-	$ret->Logout();
-}
-
-
-
-if($_POST &&  isset($_POST['login']))
+if(isset($_POST['loginuser']))
 {
 
 	$response= $ret->Send();
-}
+}*/
 
 ?>
 
@@ -49,7 +40,7 @@ if($_POST &&  isset($_POST['login']))
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
 </head>
 <body>
-	<?php $name1=$name2=$pword1=$pword2="";?>
+
 
 	<script type="text/javascript">
 		$(window).scroll(function() {
@@ -96,12 +87,12 @@ if($_POST &&  isset($_POST['login']))
 			<div id="login-panel">
 				<center>
 
-					<form action="" method="post">
+					<form action="loginaction.php" method="post" name="login" onsubmit="return logvalidate();">
 
 						<h3 style="color: white; letter-spacing: 4px;">Get Started</h3>
 						<br>
-						<input type="Text" name="Username" id="Uname_log" placeholder="Username" class="inputbody" required autofocus>
-						<input type="password" name="passwd" placeholder="Password" class="inputbody" autofocus required><br>
+						<input type="Text" name="Username" id="Uname_log" placeholder="Username" class="inputbody" autofocus>
+						<input type="password" name="passwd" placeholder="Password" class="inputbody" autofocus><br>
 						<div style="display: flex; justify-content: space-around;">
 							<div>
 								<input type="checkbox" name="rem1" value="Remember Me" class="check1">
@@ -109,7 +100,7 @@ if($_POST &&  isset($_POST['login']))
 							</div>
 							<a href="#forgot" >Forgot Password?</a></div>
 							<br><br>
-							<input type="submit" name="login" value="LOGIN" class="submitbut">
+							<input type="submit" name="loginuser" value="LOGIN" class="submitbut">
 							<br><h5>OR</h5><br>
 							<a href="signup.php" class="register-button" style="text-decoration: none;" >		
 								<span></span>
@@ -188,7 +179,7 @@ if($_POST &&  isset($_POST['login']))
 	<h1 class="typestyle"><span style="color: rgb(0,168,246);">Energy</span><hr style="margin: 2%;border-top: none;"><span
 		class="txt-rotate"
 		data-period="500"
-		data-rotate='[ "has never been easier. ", "on your fingertips. ", "to you, for you. ", "faster delivered than ever. ", "simplified by iNDRA. " ]'></span></h1>
+		data-rotate='[ "has never been easier. ", "on your fingertips. ", "to you, for you. ", "faster delivered.", "simplified by iNDRA. " ]'></span></h1>
 <!-- 					<button class="">Get It Now</button>
 	We help making change happen
 	Energy has never been simpler
@@ -253,11 +244,6 @@ if($_POST &&  isset($_POST['login']))
 		xhttp.send();
 	}
 </script>
-
-
-
-
-
 <button class="hvr-float-shadow"><h4>Learn More</h4></button><br>
 </div>
 </div>
