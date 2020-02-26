@@ -44,7 +44,7 @@ else{
 
 	<script type="text/javascript">
 		$(window).scroll(function() {
-			if ($(document).scrollTop() > 100) {
+			if ($(document).scrollTop() > 20) {
 				$('.navbar-scroll').addClass('color-change');
 				$('.navbar-logo').addClass('size-change');
 				$('.Nav_Button').addClass('margin-change');
@@ -85,44 +85,74 @@ else{
 
 		</div>
 		<div>
-		<div>
-			<h3>Name</h3><p><h4><?php echo $fname ?></h4></p>
-			<h3>User Name</h3><p><h4><?php echo $uname ?></h4></p>
-			<h3>Email ID</h3><p><h4><?php echo $email ?></h4></p>
-			<h3>API </h3>
-			<h3></h3>
+		<div style="display: flex;">
+			<div style="margin-right: 15%; width: 20%"> 
+			<h3 class="det_header">Name</h3>
+			<h3 class="det_header">User Name</h3>
+			<h3 class="det_header">Email ID</h3>
+			<h3 class="det_header">API </h3>
 		</div>
-		<br>
+		<div>
+			<h3 class="det_header1"><?php echo $fname ?></h3>
+			<h3 class="det_header1"><?php echo $uname ?></h3>
+			<h3 class="det_header1"><?php echo $email ?></h3>
+
+		</div>
+		</div>
+
+		<br><br>
 			<div class="wrap-collabsible">
 				<input id="collapsible" class="toggle" type="checkbox">
 				<label for="collapsible" class="lbl-toggle" >
 					<div>
-						<h3 style="letter-spacing: 2px; float: left;">APPLICANCE LED 1</h3>
+						<h3 style="letter-spacing: 2px;">APPLICANCE LED 1</h3>
 					</div>
-					<div style="display: inline-flex; float: right;">
-						<iframe   class="frame" height="100%" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/995714/widgets/151401"></iframe>
-						<iframe   class="frame" height="100%" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/995714/widgets/151404"></iframe>
-						<iframe   class="frame" height="100%" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/995714/widgets/151414"></iframe>
+					<br>
+					<div style="display:flex; justify-content: space-around;">
+						<!-- <iframe style="border: 1px solid #cccccc; border-radius: 10px;" src="https://thingspeak.com/channels/995714/widgets/152002"></iframe> -->
+						<iframe style="border: 1px solid #cccccc; border-radius: 10px;" src="https://thingspeak.com/channels/995714/widgets/152005"></iframe>
+					<iframe style="border: 1px solid #cccccc; border-radius: 10px;" src="https://thingspeak.com/channels/995714/widgets/152006"></iframe>
 					</div>
+					<div style="display: flex; width: 100%; justify-content: center;">
+<button class="switchbut" id="light-on">ON</button>
+<button class="switchbut" id="light-off">OFF</button>				
+					</div>
+					<script>
+						document.getElementById('light-on').addEventListener('click', function() {
+				var ts_api_key = "80TOVS0ZIBOLVEDM";
+				var url = "http://api.thingspeak.com/update?api_key="+ ts_api_key + "&field1=1"
+				$.getJSON(url, function(data) {
+					console.log(data);
+				});
+			});
+		
+			document.getElementById('light-off').addEventListener('click', function() {
+				var ts_api_key = "80TOVS0ZIBOLVEDM";
+				var url = "http://api.thingspeak.com/update?api_key="+ ts_api_key + "&field1=0"
+				$.getJSON(url, function(data) {
+					console.log(data);
+				});
+			});
+		</script>
 				</label>
 				<div class="collapsible-content">
 					<div class="content-inner">
 						<hr>
-						<div style="display: inline-flex;">
+						<div style="display: inline-flex; justify-content: space-between;">
 
-							<div class="graphs">
+							<!-- <div class="graphs"> -->
 								<!-- VOLTAGE -->
-								<iframe  class="frame" width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/995714/charts/1?bgcolor=%23daf1f7&color=%2300c4f8&dynamic=true&results=60&title=Voltage&type=spline"></iframe>
+								<!-- <iframe  class="frame" width="450" height="260" style="border: none;"src="https://thingspeak.com/channels/995714/charts/1?bgcolor=%23daf1f7&color=%2300c4f8&dynamic=true&results=60&title=Voltage&type=spline"></iframe>
 							</div>
-
+ -->
 							<div class="graphs">
 								<!-- AMPERE -->
-								<iframe class="frame" width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/995714/charts/2?bgcolor=%23daf1f7&color=%2300c4f8&dynamic=true&results=60&title=Ampere&type=line"></iframe>
+								<iframe class="frame" width="450" height="260" style="border:none;" src="https://thingspeak.com/channels/995714/charts/2?bgcolor=%23daf1f7&color=%2300c4f8&dynamic=true&results=60&title=Ampere&type=line"></iframe>
 							</div>
 
 							<div class="graphs">
 								<!-- POWER -->
-								<iframe class="frame" width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/995714/charts/3?bgcolor=%23daf1f7&color=%2300c4f8&dynamic=true&results=60&title=Power&type=line"></iframe>
+								<iframe class="frame" width="450" height="260" style="border:none;" src="https://thingspeak.com/channels/995714/charts/3?bgcolor=%23daf1f7&color=%2300c4f8&dynamic=true&results=60&title=Power&type=line"></iframe>
 							</div>
 
 						</div>
@@ -141,7 +171,7 @@ else{
 		</div>
 
 
-		<div class="footer">QWERTYUIOQWERTYUIOQWERTYUIO	
+		<div class="footer">
 			<center>
 				<div class="footermid">
 					<div class="footermid-el">
