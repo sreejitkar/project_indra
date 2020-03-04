@@ -104,7 +104,7 @@ if(isset($_POST['loginuser']))
 								<span></span>
 								<span></span>
 								<span></span>
-								Register
+								Sign Up
 							</a>
 
 						</form>
@@ -329,7 +329,7 @@ current power load so as to prevent overloading and blackout (power outage).
 </div>
 <div class="footer">
 	<center>
-		<div class="footermid">
+<!-- 		<div class="footermid">
 			<div class="footermid-el">
 				<li style="list-style: none;">
 					<ul class="footer-list-el"><h3 class="footer-label"><b>THE TEAM</b></h3></ul>
@@ -360,7 +360,7 @@ current power load so as to prevent overloading and blackout (power outage).
 					<ul class="footer-list-el">Thank Us</ul>
 				</li>	
 			</div>
-		</div>
+		</div> -->
 		<div class="footerend">
 			<img class="imgclass" src="instagram (1).png">
 			<img class="imgclass" src="facebook (1).png">

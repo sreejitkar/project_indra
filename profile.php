@@ -84,21 +84,25 @@ else{
 			</ul>
 
 		</div>
+		<center>
 		<div>
-		<div style="display: flex;">
-			<div style="margin-right: 15%; width: 20%"> 
-			<h3 class="det_header">Name</h3>
-			<h3 class="det_header">User Name</h3>
-			<h3 class="det_header">Email ID</h3>
-			<h3 class="det_header">API </h3>
+		<div style="display: flex; text-align: ">
+			<table class="det_table">
+				<tr>
+					<td><h2 class="det_header">Name</h2></td>
+					<td><h3 class="det_header1"><?php echo $fname ?></h3></td>
+				</tr>
+				<tr>
+					<td><h2 class="det_header">Username</h2></td>
+					<td><h3 class="det_header1"><?php echo $uname ?></h3></td>
+				</tr>
+				<tr>
+					<td><h2 class="det_header">Email- ID</h2></td>
+					<td><h3 class="det_header1"><?php echo $email ?></h3></td>
+				</tr>
+			</table>
 		</div>
-		<div>
-			<h3 class="det_header1"><?php echo $fname ?></h3>
-			<h3 class="det_header1"><?php echo $uname ?></h3>
-			<h3 class="det_header1"><?php echo $email ?></h3>
-
-		</div>
-		</div>
+</center>
 
 		<br><br>
 			<div class="wrap-collabsible">
@@ -173,7 +177,7 @@ else{
 
 		<div class="footer">
 			<center>
-				<div class="footermid">
+<!-- 				<div class="footermid">
 					<div class="footermid-el">
 						<li style="list-style: none;">
 							<ul class="footer-list-el"><h3 class="footer-label"><b>THE TEAM</b></h3></ul>
@@ -204,7 +208,7 @@ else{
 							<ul class="footer-list-el">Thank Us</ul>
 						</li>	
 					</div>
-				</div>
+				</div> -->
 				<div class="footerend">
 					<img class="imgclass" src="instagram (1).png">
 					<img class="imgclass" src="facebook (1).png">

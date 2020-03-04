@@ -1,14 +1,22 @@
+
+
+@font-face{
+	font-family: 'Aileron';
+	src:url(fonts/Aileron-Light.otf);
+	font-weight: 250;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Segoe UI";
+	font-family: 'Segoe UI' !important;
 	outline: none;
 
 }
 
 body {
-	font-family: 'Segoe';
+	font-family: 'Segoe UI';
 	overflow: hidden;
 /*	background-color: #5C6BC0;
 */}
@@ -24,6 +32,7 @@ body {
 	height: 100vh;
 	margin: 0px;
 	padding: 0px;
+	justify-content: 
 }
 
 html {
@@ -178,6 +187,16 @@ html {
   right: 0;
 }
 
+
+/******************************DETAILS*********************/
+td{
+	letter-spacing: 1px; 
+	padding: 0 40px 0 40px !important;
+}
+
+table tr td{
+	border:1px solid white;
+}
 /****************I_FRAMES*******************************/
 .frame
 {
@@ -194,6 +213,7 @@ html {
 	color: white;
 	size: 150%;
 	padding: 5%;
+	width: 100%;
 }
 
 
@@ -201,6 +221,7 @@ html {
 	color: rgb(0,168,246);
 	size: 150%;
 	padding: 10%;
+	width: 100%;
 }
 
 .switchbut{
