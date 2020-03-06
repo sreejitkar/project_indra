@@ -64,7 +64,7 @@ else
              $folder="userimg/$uname/";
              $target_file=$folder.basename($_FILES["upload_file"]["name"]);
              move_uploaded_file($_FILES["upload_file"]["tmp_name"],$target_file);*/
-            header('location: profile.php');
+            header('location: indra.php');
           } 
          else
          {

@@ -59,7 +59,7 @@ if(isset($_POST['loginuser']))
 	<!-- ********************** OPENING PAGE ************************* -->
 	<div class="bodydiv">
 		<div class="navbar-scroll">
-			<img src="logo123.png" class="navbar-logo">
+			<img src="logofinal.png" class="navbar-logo">
 			<ul class="Nav_Bar_Body">
 
 				<li class="Nav_Button hvr-underline-from-center"><a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
@@ -88,8 +88,10 @@ if(isset($_POST['loginuser']))
 
 						<h3 style="color: white; letter-spacing: 4px;">Get Started</h3>
 						<br>
+						<div style="justify-content: space-between">
 						<input type="Text" name="Username" id="Uname_log" placeholder="Username" class="inputbody" autofocus>
 						<input type="password" name="passwd" placeholder="Password" class="inputbody" autofocus><br>
+					</div>
 						<div style="display: flex; justify-content: space-around;">
 							<div>
 								<input type="checkbox" name="rem1" value="Remember Me" class="check1">
@@ -114,28 +116,25 @@ if(isset($_POST['loginuser']))
 				<div class="login-panel" style="display: none;" id="signup1">
 					<center>
 
-					<form action="loginaction.php" method="post" name="login" onsubmit="return logvalidate();">
+					<form action="regaction.php" method="post" name="register" onsubmit="return regvalidate();" id="registerform">
 
-						<h3 style="color: white; letter-spacing: 4px;">Get Started</h3>
+						<h3 style="color: white; letter-spacing: 4px;">Register as User</h3>
 						<br>
 						<input type="Text" name="Username" id="Uname_log" placeholder="Username" class="inputbody" autofocus>
-						<input type="password" name="passwd" placeholder="Password" class="inputbody" autofocus><br>
-						<div style="display: flex; justify-content: space-around;">
-							<div>
-								<input type="checkbox" name="rem1" value="Remember Me" class="check1">
-								<label>Remember Me</label>
-							</div>
-							<a href="#forgot" >Forgot Password?</a></div>
-							<br><br>
-							<input type="submit" name="loginuser" value="LOGIN" class="submitbut">
+							<input type="Text" name="fname" placeholder="Full Name" class="inputbody" autofocus>
+							<input type="email" name="email" placeholder="E-mail ID" class="inputbody" autofocus>
+							<input type="password" name="passwd" placeholder="Password" class="inputbody" autofocus>
+							<input type="password" name="cpasswd" placeholder=" Confirm Password" class="inputbody" autofocus>
+						<div>
+							<input type="submit" name="Register" value="SIGN UP" class="submitbut">
 							<br><h5>OR</h5><br>
-							<button class="register-button" style="text-decoration: none;" onclick="slide(1)">		
+							<a class="register-button" style="text-decoration: none;" onclick="slide(1)">		
 								<span></span>
 								<span></span>
 								<span></span>
 								<span></span>
 								LOG IN
-							</button>
+							</a>
 
 						</form>
 					</center>
@@ -234,7 +233,7 @@ if(isset($_POST['loginuser']))
 	Inspire the iNDRA in you
 
 -->
-<<button class="hvr-float-shadow"><h4>Learn More</h4></button><br>
+<button class="hvr-float-shadow"><h4>Learn More</h4></button><br>
 </div>
 </div>
 <!-- <script>

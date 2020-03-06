@@ -35,7 +35,7 @@ if (mysqli_num_rows($result) > 0) {
         $_SESSION['fname']=$fname;
         $_SESSION['email']=$email;
         $_SESSION['logged_in']='Active';
-        header('location: profile.php');
+        header('location: indra.php');
     }
 } else {
     echo "<html>";

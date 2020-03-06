@@ -239,7 +239,7 @@ html {
 	height: 40px;
 	background-color: rgba(256,256,256,0.2);
 	color: #a9a9a9;
-	margin-bottom: 8%;
+	margin: 2% 0 2% 0;
 	border:rgba(256,256,256,0.2);
 	transition-duration: 0.2s;
 }
@@ -439,7 +439,7 @@ html {
 .typestyle{
 	font-size: 350%;
 }
-
+/***************************
 
 /*******************************LearnBUt********************/
 /* Float Shadow */
