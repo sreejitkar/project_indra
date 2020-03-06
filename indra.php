@@ -35,6 +35,7 @@ $uname=$_SESSION['uname'];
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300&display=swap" rel="stylesheet">
 	<meta name=”viewport” content=”width=device-width, initial-scale="1.0">
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -162,8 +163,12 @@ $uname=$_SESSION['uname'];
 <div class="col">
     <div class="tabs">
       <div class="tab">
+
+
         <input type="radio" id="rd1" name="rd">
+
         <label class="tab-label" for="rd1">APPLIANCE 1</label>
+
         <div class="tab-content">
 		<iframe class="graphs" src="https://thingspeak.com/channels/995714/charts/2?bgcolor=%23daf1f7&color=%2300c4f8&dynamic=true&results=60&title=Ampere&type=line"></iframe>
 
@@ -187,61 +192,8 @@ $uname=$_SESSION['uname'];
   </div>
 </div>
 
-<!-- 		<script src="JS/scroll.js"></script>
--->
-<!-- ************************************************************** -->
-
-
 <?php if(isset($response)) echo "<h4 class='alert'>".$response."</h4>";?>
 
-<!-- <div class="infoclass-out">
-	<h1 style="color: rgb(0,168,246);">About</h1>
-	<div class="infoclass-content">
-		The world is on the verge of finishing its almost all sources of non-renewable
-energy. The current technologies can only predict an approximate electrical
-consumption in households and other institutions [3] . The prediction of power
-usage is useful only when we have an efficient way of using the electrical
-power that is being produced. The idea of the project is to develop a wifi-based
-network which would be used to monitor the electrical systems in urban
-households and would be connected to the local wifi system (Hub) . This
-network will be used to provide live electric usage data to the user’s mobile
-device using an easy-to-use mobile application, the government as well as the
-Power producing companies which can be used to detect power outages and
-will also give the people a very meaningful insight on their power consumption
-which include a reward-basis system for rewarding efficient power users and
-will also give the current power load so as to prevent overloading and blackout(
-power outage) . The network would include an embedded CPU or an Arduino
-Uno. The sensors used in the system will be based on the AEON (Accurate
-Prediction of Power Consumption) to quantitatively predict consumption of
-electrical energy. [3] The sensors used in the system will be Mica2 sensor node
-and ACS712 current sensor which would the network in collecting data
-integrated by ThingSpeak.
-The world of energy is changing. There is a global urge to drastically reduce CO2
-emissions in order to slow down global warming. 
-
-Nations are reducing their dependency on imported fossil fuels by stimulating energy
-savings and the use of renewable energy. 
-
-Sustainable sources, such as solar and wind energy, are not always available. Integrating
-large shares of renewable energy in our current energy supply system in a reliable way
-provides a real challenge. 
-
-Our energy use is shifting towards electricity. This trend is accelerated by the fast-
-growing fleet of electric vehicles and the increase of electric space heating and cooling.
-The electrification of our energy use adds to the challenges that our future energy supply
-system faces.
-
-Our project proposal is to develop a wireless based network which would be used to
-monitor the electrical systems in urban households and would be connected to the local
-wireless system (Hub). This network will be used to provide live electric usage data to the
-user’s mobile device using an easy-to-use mobile application, the government as well as
-the Power producing companies. This method can be used to detect power outages and
-will also give the people a very meaningful insight on their power consumption which
-include a reward-basis system for rewarding efficient power users and will also give the
-current power load so as to prevent overloading and blackout (power outage).
-
-	</div>
-</div> -->
 <br>
 <br>
 <br>
@@ -250,38 +202,7 @@ current power load so as to prevent overloading and blackout (power outage).
 <br>
 <div class="footer">
 	<center>
-<!-- 		<div class="footermid">
-			<div class="footermid-el">
-				<li style="list-style: none;">
-					<ul class="footer-list-el"><h3 class="footer-label"><b>THE TEAM</b></h3></ul>
-					<br>
-					<ul class="footer-list-el">Know us</ul>
-					<ul class="footer-list-el">Members</ul>
-					<ul class="footer-list-el">Acknowledgments</ul>
-					<ul class="footer-list-el">Thank Us</ul>
-				</li>	
-			</div>
-			<div class="footermid-el">
-				<li style="list-style: none;">
-					<ul class="footer-list-el"><h3 class="footer-label"><b>HELP</b></h3></ul>
-					<br>
-					<ul class="footer-list-el">Documentation</ul>
-					<ul class="footer-list-el">Read Logs</ul>
-					<ul class="footer-list-el">Report an Issue</ul>
-					<ul class="footer-list-el">Customer Forum</ul>
-				</li>	
-			</div>
-			<div class="footermid-el">
-				<li style="list-style: none;">
-					<ul class="footer-list-el"><h3 class="footer-label"><b>OUR SERVICES</b></h3></ul>
-					<br>
-					<ul class="footer-list-el">Energy Solutions</ul>
-					<ul class="footer-list-el">Remote Environment</ul>
-					<ul class="footer-list-el">Our Partners</ul>
-					<ul class="footer-list-el">Thank Us</ul>
-				</li>	
-			</div>
-		</div> -->
+
 		<div class="footerend">
 			<img class="imgclass" src="instagram (1).png">
 			<img class="imgclass" src="facebook (1).png">

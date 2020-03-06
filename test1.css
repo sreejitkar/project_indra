@@ -498,29 +498,30 @@ input {
 .tabs {
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
-}
+/*   box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+ */}
 
 .tab {
   width: 100%;
   color: white;
   overflow: hidden;
-  background-color: transparent;
+  background-color: rgba(255,255,255,.1);
+
 }
 .tab-label {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 1em;
-background-color: rgba(255,255,255,.1);
-font-weight: bold;
+  background-color: rgba(255,255,255,.1);
+  font-weight: bold;
   cursor: pointer;
   letter-spacing: 5px;
   font-size: 100%;
   /* Icon */
 }
-.tab-label:hover {
+.tab .tab-label:hover {
   background: #1a252f;
 }
 .tab-label::after {
@@ -581,6 +582,68 @@ input:checked ~ .tab-content {
 
 /**************************************************************/
 
+
+/*******************SLIDERBUTTON***************************/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/*********************************************************/
 /*****************Information***************************/
 
 

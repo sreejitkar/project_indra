@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Team Indra</title>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="teampage.css">
+	<link href="https://fonts.googleapis.com/css?family=Tajawal:300,400&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Inter:300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="navbar-scroll">
+			<img src="logo123.png" class="navbar-logo">1
+			<ul class="Nav_Bar_Body">
+				<li class="Nav_Button hvr-underline-from-center"><a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
+					<h4 style="color: white;">Login / Signup</h4></a>
+				</li>
+				<li class="Nav_Button hvr-underline-from-center">
+					<a href="#About" class="Nav_Button_Link" style="text-decoration: none;"><h4 style="color: white;">Why Us?</h4>
+				</li>
+			</ul>
+	</div>
+<div id="slideshow">
+	   <div>
+	<img src="slide2.jpg">
+	   </div>
+	   <div>
+	<img src="slide1.jpeg">
+	   </div>
+</div>
+<script>
+	$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+}, 3000);
+
+AOS.init({
+  duration: 1000,
+})
+</script>
+
+<div data-aos="fade-right" class="info-div">
+	<h1 class="info-div-label">About Us</h1>
+	The world is on the verge of finishing its almost all sources of non-renewable
+energy. The current technologies can only predict an approximate electrical
+consumption in households and other institutions. The prediction of power
+usage is useful only when we have an efficient way of using the electrical
+power that is being produced. The idea of the project is to develop a wifi-based
+network which would be used to monitor the electrical systems in urban
+households and would be connected to the local wifi system (Hub).
+The world of energy is changing. There is a global urge to drastically reduce CO2
+emissions in order to slow down global warming. 
+
+Nations are reducing their dependency on imported fossil fuels by stimulating energy
+savings and the use of renewable energy. 
+
+Sustainable sources, such as solar and wind energy, are not always available. Integrating
+large shares of renewable energy in our current energy supply system in a reliable way
+provides a real challenge. 
+
+</div>
+
+</body>
+</html>
