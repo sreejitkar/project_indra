@@ -1,29 +1,8 @@
-<?php 
-
-/*require "hello.php";
-
-$ret= new hello();
-
-//User to logout
-
-// if(isset($_GET['status']) && $_GET['status']=='loggedout')
-// {
-// 	$ret->Logout();
-// }
-
-if(isset($_POST['loginuser']))
-{
-
-	$response= $ret->Send();
-}*/
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>German Project</title>
-	<link rel="stylesheet" href="mainpage.css" type="text/css">
+	<link rel="stylesheet" href="test1.css" type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -33,6 +12,7 @@ if(isset($_POST['loginuser']))
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="JS/validate.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300&display=swap" rel="stylesheet">
 	<meta name=”viewport” content=”width=device-width, initial-scale="1.0">
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
 </head>
@@ -60,107 +40,41 @@ if(isset($_POST['loginuser']))
 	<div class="bodydiv">
 		<div class="navbar-scroll">
 			<img src="logo123.png" class="navbar-logo">
-			<ul class="Nav_Bar_Body">
-
-				<li class="Nav_Button hvr-underline-from-center"><a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
-					<h4>About</h4></a>
-				</li>
-				<li class="Nav_Button hvr-underline-from-center">
+			<div class="Nav_Bar_Body">
+				<div class="Nav_Button hvr-underline-from-center">
 					<a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
-
-						<h4>Why Us?</h4>
-				</li>
-				<li class="Nav_Button hvr-underline-from-center">
+						<h4>Settings</h4>
+				</div>
+				<div class="Nav_Button hvr-underline-from-center">
 					<a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
-						<h4>Help</h4>
+						<h4>Logout</h4>
 					</a>
-				</li>
+				</div>
 
-			</ul>
+			</div>
 		</div>
 
 
 		<div class="container1">
-			<div class="login-panel" style="display: block;" id="login1">
+			<div id="login-panel">
 				<center>
-
-					<form action="loginaction.php" method="post" name="login" onsubmit="return logvalidate();">
-
-						<h3 style="color: white; letter-spacing: 4px;">Get Started</h3>
-						<br>
-						<input type="Text" name="Username" id="Uname_log" placeholder="Username" class="inputbody" autofocus>
-						<input type="password" name="passwd" placeholder="Password" class="inputbody" autofocus><br>
-						<div style="display: flex; justify-content: space-around;">
-							<div>
-								<input type="checkbox" name="rem1" value="Remember Me" class="check1">
-								<label>Remember Me</label>
-							</div>
-							<a href="#forgot" >Forgot Password?</a></div>
-							<br><br>
-							<input type="submit" name="loginuser" value="LOGIN" class="submitbut">
-							<br><h5>OR</h5><br>
-							<a class="register-button" style="text-decoration: none;" onclick="slide(0)">		
-								<span></span>
-								<span></span>
-								<span></span>
-								<span></span>
-								Sign Up
-							</a>
-
-						</form>
-					</center>
-
-				</div>
-				<div class="login-panel" style="display: none;" id="signup1">
-					<center>
-
-					<form action="loginaction.php" method="post" name="login" onsubmit="return logvalidate();">
-
-						<h3 style="color: white; letter-spacing: 4px;">Get Started</h3>
-						<br>
-						<input type="Text" name="Username" id="Uname_log" placeholder="Username" class="inputbody" autofocus>
-						<input type="password" name="passwd" placeholder="Password" class="inputbody" autofocus><br>
-						<div style="display: flex; justify-content: space-around;">
-							<div>
-								<input type="checkbox" name="rem1" value="Remember Me" class="check1">
-								<label>Remember Me</label>
-							</div>
-							<a href="#forgot" >Forgot Password?</a></div>
-							<br><br>
-							<input type="submit" name="loginuser" value="LOGIN" class="submitbut">
-							<br><h5>OR</h5><br>
-							<button class="register-button" style="text-decoration: none;" onclick="slide(1)">		
-								<span></span>
-								<span></span>
-								<span></span>
-								<span></span>
-								LOG IN
-							</button>
-
-						</form>
-					</center>
-					
-				</div>
-
-
-				<script type="text/javascript">
-				function slide(n){
-					var i;
-  					var x = document.getElementsByClassName("login-panel");
-  					  for (i = 0; i < x.length; i++)
-  					   {
-    						x[i].style.display = "none";  
-  						}
-  						if(n==0)
-  							document.getElementById("signup1").style.display="block";
-  						if(n==1)
-  							document.getElementById("login1").style.display="block";
-
-				}	
-				</script>
-
-
-
+					<h1 style="color: rgba(255,255,255,0.7)">My Persona</h1>
+					<table class="det_table">
+						<tr>
+							<td class="attcell">N A M E</td><td class="valuecell">Sreejit Kar</td>
+						</tr>
+						<tr>
+							<td class="attcell">U S E R N A M E</td><td class="valuecell">sreejitkar999</td>
+						</tr>
+						<tr>
+							<td class="attcell">D E V I C E S</td><td class="valuecell">3</td>
+						</tr>
+						<tr>
+							<td class="attcell">L O C A T I O N</td><td class="valuecell">Bangalore</td>
+						</tr>						
+					</table>
+				</center>
+			</div>
 				<script type="text/javascript">
 					var TxtRotate = function(el, toRotate, period) {
 						this.toRotate = toRotate;
@@ -234,7 +148,64 @@ if(isset($_POST['loginuser']))
 	Inspire the iNDRA in you
 
 -->
-<<button class="hvr-float-shadow"><h4>Learn More</h4></button><br>
+<script>
+	function hideapikey() {
+		var x = document.getElementById("ts-api-key");
+		if (x.type === "password") {
+			x.type = "text";
+		} else {
+			x.type = "password";
+		}
+	}
+	function hidechannelid() {
+		var x = document.getElementById("ts-channel-id");
+		if (x.type === "password") {
+			x.type = "text";
+		} else {
+			x.type = "password";
+		}
+	}
+
+	document.getElementById('light-on').addEventListener('click', function() {
+		var ts_api_key = document.getElementById('ts-api-key').value;
+		var url = "http://api.thingspeak.com/update?api_key="+ ts_api_key + "&field1=1"
+		$.getJSON(url, function(data) {
+			console.log(data);
+		});
+	});
+
+	document.getElementById('light-off').addEventListener('click', function() {
+		var ts_api_key = document.getElementById('ts-api-key').value;
+		var url = "http://api.thingspeak.com/update?api_key="+ ts_api_key + "&field1=0"
+		$.getJSON(url, function(data) {
+			console.log(data);
+		});
+	});
+
+	setInterval(function() {
+			// Call a function repetatively with 15 Second interval
+			getThingSpeakLightState();
+		}, 1000);
+
+	function getThingSpeakLightState() {
+		var ts_channel_id = document.getElementById('ts-channel-id').value;
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				var myObj = JSON.parse(this.responseText);
+				if (myObj.field1 == 1) {
+					document.getElementById("LIGHTState").innerHTML = "ON";
+				}
+				else {
+					document.getElementById("LIGHTState").innerHTML = "OFF";
+				}
+			}
+		};
+		xhttp.open("GET", "https://api.thingspeak.com/channels/" + ts_channel_id + "/fields/1/last.json", true);
+		xhttp.send();
+	}
+</script>
+<button class="hvr-float-shadow"><h4>Learn More</h4></button><br>
 </div>
 </div>
 <!-- <script>
@@ -255,13 +226,6 @@ if(isset($_POST['loginuser']))
 </script> -->
 <!-- VIDEO CONTAINER -->
 
-<div class="video-container">
-
-	<div class="video-overlay"></div>
-	<video   loop muted autoplay >
-		<source src="video1.mp4" type="video/mp4">
-		</video>
-	</div>
 
 
 </div>
@@ -272,7 +236,7 @@ if(isset($_POST['loginuser']))
 
 <?php if(isset($response)) echo "<h4 class='alert'>".$response."</h4>";?>
 
-<div class="infoclass-out">
+<!-- <div class="infoclass-out">
 	<h1 style="color: rgb(0,168,246);">About</h1>
 	<div class="infoclass-content">
 		The world is on the verge of finishing its almost all sources of non-renewable
@@ -319,7 +283,7 @@ include a reward-basis system for rewarding efficient power users and will also 
 current power load so as to prevent overloading and blackout (power outage).
 
 	</div>
-</div>
+</div> -->
 <div class="footer">
 	<center>
 <!-- 		<div class="footermid">
