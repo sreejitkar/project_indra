@@ -9,27 +9,36 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Inter:300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="navbar-scroll">
-			<img src="logo123.png" class="navbar-logo">1
+			<img src="logo123.png" class="navbar-logo">
 			<ul class="Nav_Bar_Body">
-				<li class="Nav_Button hvr-underline-from-center"><a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
-					<h4 style="color: white;">Login / Signup</h4></a>
-				</li>
 				<li class="Nav_Button hvr-underline-from-center">
-					<a href="#About" class="Nav_Button_Link" style="text-decoration: none;"><h4 style="color: white;">Why Us?</h4>
+					<a href="index.php" class="Nav_Button_Link" style="text-decoration: none;">
+					<h4 style="color: white; font-weight: 400; letter-spacing: 10px;">home</h4></a>
 				</li>
 			</ul>
 	</div>
-<div id="slideshow">
-	   <div>
+<div id="slideshow" data-aos="zoom-in">
+<!-- 	   <div>
 	<img src="slide2.jpg">
 	   </div>
 	   <div>
 	<img src="slide1.jpeg">
-	   </div>
+	   </div> -->
+	   <center>
+	   	<div class="main-label">
+	   		<center>
+	   		<h1><center><span class="own">I</span>NDRA</center></h1>
+			</center>
+<!-- 			<h6>Energy at your fingertips</h6>
+ -->		</div>
+	</center>
 </div>
+
 <script>
 	$("#slideshow > div:gt(0)").hide();
 
@@ -47,8 +56,8 @@ AOS.init({
 })
 </script>
 
-<div data-aos="fade-right" class="info-div">
-	<h1 class="info-div-label">About Us</h1>
+<div data-aos="fade-right" class="info-div" id="info1">
+	<h1 class="info-div-label"><span class="own">About</span> Us</h1>
 	The world is on the verge of finishing its almost all sources of non-renewable
 energy. The current technologies can only predict an approximate electrical
 consumption in households and other institutions. The prediction of power
@@ -67,6 +76,13 @@ large shares of renewable energy in our current energy supply system in a reliab
 provides a real challenge. 
 
 </div>
+
+<div data-aos="fade-left" class="info-div" id="info2">
+	<h1 class="info-div-label">The <span class="own">Need</span></h1>
+Nations are reducing their dependency on imported fossil fuels by stimulating energy
+savings and the use of renewable energy. Sustainable sources, such as solar and wind energy, are not always available. Integrating large shares of renewable energy in our current energy supply system in a reliable wayprovides a real challenge. Our energy use is shifting towards electricity. This trend is accelerated by the fast-growing fleet of electric vehicles and the increase of electric space heating and cooling.The electrification of our energy use adds to the challenges that our future energy supply system faces.Our project proposal is to develop a wireless based network which would be used to monitor the electrical systems in urban households and would be connected to the local wireless system (Hub).
+</div>
+
 
 </body>
 </html>

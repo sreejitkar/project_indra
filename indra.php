@@ -67,7 +67,7 @@ $uname=$_SESSION['uname'];
 						<h4>Settings</h4>
 				</div>
 				<div class="Nav_Button hvr-underline-from-center">
-					<a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
+					<a href="logout.php" class="Nav_Button_Link" style="text-decoration: none;">
 						<h4>Logout</h4>
 					</a>
 				</div>
@@ -170,19 +170,29 @@ $uname=$_SESSION['uname'];
         <label class="tab-label" for="rd1">APPLIANCE 1</label>
 
         <div class="tab-content">
-		<iframe class="graphs" src="https://thingspeak.com/channels/995714/charts/2?bgcolor=%23daf1f7&color=%2300c4f8&dynamic=true&results=60&title=Ampere&type=line"></iframe>
-
-		<iframe class="graphs" src="https://thingspeak.com/channels/995714/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-
+        <div style="display: flex; height: 260px;">
+			<iframe class="graphs" src="https://thingspeak.com/channels/995714/charts/2?bgcolor=%23daf1f7&color=%2300c4f8&dynamic=true&results=60&title=Ampere&type=line"></iframe>
+			<iframe class="graphs" src="https://thingspeak.com/channels/995714/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+		</div>
+		<div style="display: flex; width: 100%; justify-content: center;">
+						<button class="switchbut" id="light-on" style="background-color: rgb(153, 255, 51);">ON</button>
+						<button class="switchbut" id="light-off" style="background-color: rgb(204, 51, 0);">OFF</button>			
+					</div>
         </div>
       </div>
       <div class="tab">
         <input type="radio" id="rd2" name="rd">
         <label class="tab-label" for="rd2">APPLIANCE 2</label>
-        <div class="tab-content">
-<iframe class="graphs" src="https://thingspeak.com/channels/995714/charts/2?bgcolor=%23daf1f7&color=%2300c4f8&dynamic=true&results=60&title=Ampere&type=line"></iframe>
-
-		<iframe class="graphs" src="https://thingspeak.com/channels/995714/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>        </div>
+         <div class="tab-content">
+        <div style="display: flex; height: 260px;">
+			<iframe class="graphs" src="https://thingspeak.com/channels/995714/charts/2?bgcolor=%23daf1f7&color=%2300c4f8&dynamic=true&results=60&title=Ampere&type=line"></iframe>
+			<iframe class="graphs" src="https://thingspeak.com/channels/995714/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+		</div>
+		<div style="display: flex; width: 100%; justify-content: center;">
+						<button class="switchbut" id="light-on" style="background-color: rgb(153, 255, 51);">ON</button>
+						<button class="switchbut" id="light-off" style="background-color: rgb(204, 51, 0);">OFF</button>				
+					</div>
+        </div>
       </div>
       <div class="tab">
         <input type="radio" id="rd3" name="rd">
@@ -191,7 +201,23 @@ $uname=$_SESSION['uname'];
     </div>
   </div>
 </div>
+<script>
+						document.getElementById('light-on').addEventListener('click', function() {
+							var ts_api_key = "80TOVS0ZIBOLVEDM";
+							var url = "http://api.thingspeak.com/update?api_key="+ ts_api_key + "&field1=1"
+							$.getJSON(url, function(data) {
+								console.log(data);
+							});
+						});
 
+						document.getElementById('light-off').addEventListener('click', function() {
+							var ts_api_key = "80TOVS0ZIBOLVEDM";
+							var url = "http://api.thingspeak.com/update?api_key="+ ts_api_key + "&field1=0"
+							$.getJSON(url, function(data) {
+								console.log(data);
+							});
+						});
+					</script>
 <?php if(isset($response)) echo "<h4 class='alert'>".$response."</h4>";?>
 
 <br>

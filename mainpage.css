@@ -204,8 +204,9 @@ html {
 	width: 7%;
 }
 .navbar-scroll.color-change{
-	background-color: rgb(0,0,0);
-	height: 12%;
+background-color: #537895;
+	background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+		height: 12%;
 }
 .Nav_Button.margin-change{
 	margin-top:1%;
@@ -514,7 +515,10 @@ text-align: justify;
 /**************** FOOTER ******************************/
 
 .footer{
-	background-color: black;
+	background-color: #537895;
+	background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+	
+	
 	bottom: 0;
 	width: 100%;
 	padding-top: 30px;

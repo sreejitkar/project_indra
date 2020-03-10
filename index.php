@@ -16,6 +16,10 @@ if(isset($_POST['loginuser']))
 
 	$response= $ret->Send();
 }*/
+session_start();
+if(isset($_SESSION['logged_in'])){
+	header('location: indra.php');
+}
 
 ?>
 
@@ -59,14 +63,14 @@ if(isset($_POST['loginuser']))
 	<!-- ********************** OPENING PAGE ************************* -->
 	<div class="bodydiv">
 		<div class="navbar-scroll">
-			<img src="logofinal.png" class="navbar-logo">
+			<img src="logo123.png" class="navbar-logo">
 			<ul class="Nav_Bar_Body">
 
-				<li class="Nav_Button hvr-underline-from-center"><a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
+				<li class="Nav_Button hvr-underline-from-center"><a href="teampage.html" class="Nav_Button_Link" style="text-decoration: none;">
 					<h4>About</h4></a>
 				</li>
 				<li class="Nav_Button hvr-underline-from-center">
-					<a href="#About" class="Nav_Button_Link" style="text-decoration: none;">
+					<a href="teampage.html" class="Nav_Button_Link" style="text-decoration: none;">
 
 						<h4>Why Us?</h4>
 				</li>
@@ -78,8 +82,14 @@ if(isset($_POST['loginuser']))
 
 			</ul>
 		</div>
-
-
+		<?php
+			      $uname='';
+			      if(isset($_SESSION['error'])){
+			        $uname=$_SESSION['uname'];
+			        echo "<script>swal('".$_SESSION['error']."','','warning');document.getElementById('Uname_log').focus();</script>";
+			        unset($_SESSION['error']);
+			      }
+		?>
 		<div class="container1">
 			<div class="login-panel" style="display: block;" id="login1">
 				<center>
@@ -113,6 +123,21 @@ if(isset($_POST['loginuser']))
 					</center>
 
 				</div>
+				<?php
+	
+				    $fname='';
+				    $uname='';
+				    $email='';
+				      if(isset($_SESSION['name_takenerror'])){
+				        $fname=$_SESSION['fname'];
+				        $uname=$_SESSION['uname'];
+				        $email=$_SESSION['email'];
+				        echo "<script>swal('".$_SESSION['name_takenerror']."','','warning')</script>
+				        ";
+				        
+				        unset($_SESSION['name_takenerror']);
+				      }
+				    ?>
 				<div class="login-panel" style="display: none;" id="signup1">
 					<center>
 
@@ -120,9 +145,9 @@ if(isset($_POST['loginuser']))
 
 						<h3 style="color: white; letter-spacing: 4px;">Register as User</h3>
 						<br>
-						<input type="Text" name="Username" id="Uname_log" placeholder="Username" class="inputbody" autofocus>
-							<input type="Text" name="fname" placeholder="Full Name" class="inputbody" autofocus>
-							<input type="email" name="email" placeholder="E-mail ID" class="inputbody" autofocus>
+						<input type="Text" name="Username" id="Uname_log" placeholder="Username" class="inputbody" alue="<?php echo $uname;?>" autofocus>
+							<input type="Text" name="fname" placeholder="Full Name" class="inputbody" value="<?php echo $fname;?>" autofocus>
+							<input type="email" name="email" placeholder="E-mail ID" class="inputbody" value="<?php echo $email;?>" autofocus>
 							<input type="password" name="passwd" placeholder="Password" class="inputbody" autofocus>
 							<input type="password" name="cpasswd" placeholder=" Confirm Password" class="inputbody" autofocus>
 						<div>
@@ -290,7 +315,7 @@ will also give the current power load so as to prevent overloading and blackout(
 power outage) . The network would include an embedded CPU or an Arduino
 Uno. The sensors used in the system will be based on the AEON (Accurate
 Prediction of Power Consumption) to quantitatively predict consumption of
-electrical energy. [3] The sensors used in the system will be Mica2 sensor node
+electrical energy.The sensors used in the system will be Mica2 sensor node
 and ACS712 current sensor which would the network in collecting data
 integrated by ThingSpeak.
 The world of energy is changing. There is a global urge to drastically reduce CO2

@@ -1,3 +1,7 @@
+:root{
+	--theme:rgb(0,168,246);
+}
+
 body{
 	background-color: #537895;
 	background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
@@ -5,6 +9,10 @@ body{
 
 }
 
+*{
+	font-family: 'Raleway';
+}
+@
 
 .navbar-scroll{
 	background-color: transparent; 
@@ -13,17 +21,19 @@ body{
 	width: 100%;
 	transition-duration: 0.4s;
 	max-height: 300px;
+	font-family: 'Raleway';
+	margin-right: 10%;
+
 }
 
 .Nav_Bar_Body{
-	font-family: 'Segoe UI';
 	list-style: none;
 	overflow: hidden;
 	color: white;
 	display: inline-flex;
 	padding: none;
-	width: 30%;
 	margin-bottom: 0px;
+	margin-right: 1%;
 	float: right;
 	justify-content: space-around;
 }
@@ -42,6 +52,7 @@ body{
 	font-size: 130%;
 	border:none;
 	transition-duration: 0.2s;
+	letter-spacing: 2px;
 
 }
 
@@ -70,7 +81,10 @@ body{
 	transition: .1s;
 /*	transition-delay: 0.1s;
 */}
+.Nav_Button_Link{
+		font-weight: 100;
 
+}
 .Nav_Button_Link:hover 
 {
 	color: rgb(0,168,246);
@@ -137,11 +151,11 @@ body{
 
 /********************SLIDESHOW*******************/
 #slideshow {
-	height: 850px;
 	overflow: hidden;
-	margin: 0 0 5% 0;
-	width: 100%;
-	justify-content: center;
+/* 	margin: 0 0 5% 0; */
+/* 	width: 100%;
+ */	justify-content: center;
+	margin: 7% 5% 5% 5%;
 }
 
 #slideshow > div {
@@ -154,12 +168,47 @@ img{
 }
 /***************************************************/
 .info-div{
-font-family: 'Inter', sans-serif;
-margin: 3%;
-border-radius: 5px;
+font-family: 'Raleway';
+border-radius: 10px;
 background-color: rgba(255,255,255,.1);
-padding: 5%;
+padding: 2% 5% 10% 5%;
 font-size: 120%;
 color: white;
 text-align: justify;
+line-height: 1.8;
+margin: 5%;
+
 }
+.info-div-label{
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.own{
+	color: rgb(0,168,246);
+}
+
+.main-label{
+	margin: 5% 20% 20% 20%;
+/* 	border:5px solid white;
+ */	font-family: 'Raleway'; 
+	text-align: center;
+	color: white;
+	justify-content: center;
+	text-transform: uppercase;
+				font-size: 300%;
+}
+
+.main-label h1{
+letter-spacing: 100px;
+font-weight: 100;
+
+
+
+}
+.main-label h6{
+
+	letter-spacing: 20px;
+	color: var(--theme);
+}
+

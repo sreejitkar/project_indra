@@ -21,16 +21,16 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-//echo "Connected successfully<br>Uname: ".$uname."<br>Password: ".$pass;
-$sql = "SELECT * FROM users WHERE Uname='$uname' AND Password = '$pass'";
+
+$sql = "SELECT * FROM users WHERE (Uname='$uname'OR Email = '$uname') AND Password = '$pass'";
 $result = mysqli_query($conn, $sql);
-//echo "<br>".$sql;
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
+        $uname=$row["Uname"];
         $fname=$row["Fname"];
         $email=$row["Email"];
-       //echo "<br>id: " . $row["ID"]. " <br>Retrieved Userame: " . $row["Uname"]. "<br>Retrieved Password: " . $row["Password"]. "<br>".$row["Fname"]."<br>".$row["Email"];
+        
         $_SESSION['uname']=$uname;
         $_SESSION['fname']=$fname;
         $_SESSION['email']=$email;
@@ -38,12 +38,15 @@ if (mysqli_num_rows($result) > 0) {
         header('location: indra.php');
     }
 } else {
-    echo "<html>";
+    /*echo "<html>";
     echo "<script src='https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js'></script>";
     echo "<body>";
     echo "<script>swal('Username or password is incorrect','','warning')</script>";
     echo "</body>";
-    echo "</html>";
+    echo "</html>";*/
+    $_SESSION['uname']=$uname;
+    $_SESSION['error'] = 'Incorrect Username or Password';
+    header('location: index.php');
 }
 
 mysqli_close($conn);
