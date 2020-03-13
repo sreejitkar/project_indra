@@ -190,7 +190,7 @@ $uname=$_SESSION['uname'];
 		</div>
 		<div style="display: flex; width: 100%; justify-content: center;">
 						<button class="switchbut" id="light-on" style="background-color: rgb(153, 255, 51);">ON</button>
-						<button class="switchbut" id="light-off" style="background-color: rgb(204, 51, 0);">OFF</button>				
+						<button class="switchbut" id="light-off" style="background-color: rgb(204, 51, 0);">SWITCH OFF</button>				
 					</div>
         </div>
       </div>
