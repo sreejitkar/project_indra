@@ -14,7 +14,7 @@ class connect
 				die("The databse is not able to get connected");
 
 
-				$sql= "SELECT F_Name, L_Name FROM Sign_Info WHERE Username =? AND Auth_String =?";
+				$sql= "SELECT * FROM Users WHERE Uname =? AND Password =?";
 
 				$pass=md5($pass);
 				
@@ -28,8 +28,9 @@ class connect
 					{
 						$row=$result->fetch_assoc();
 
-							$_SESSION['fname']=$row['F_Name'];
-							$_SESSION['lname']=$row['L_Name'];
+							$_SESSION['fname']=$row['Fname'];
+							$_SESSION['email']=$row['Email'];
+							$_SESSION['uname']=$row['Uname'];
 	
 						$stmt->close();
 						return true;

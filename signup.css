@@ -1,0 +1,188 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Segoe UI";
+	outline: none;
+
+}
+
+body {
+	font-family: 'Segoe';
+	overflow: hidden;
+/*	background-color: #5C6BC0;
+*/}
+
+/**************	MEDIA****************/
+
+@media (min-aspect-ratio: 16/9)
+{
+	.video-container
+	{
+		width: 100%;
+		height: auto;
+
+	}
+
+
+}
+@media (max-aspect-ratio: 16/9)
+{
+	.video-container
+	{
+		width: auto;
+		height: 100%;
+	}
+}
+.video-container
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: -10;
+}
+.video-overlay
+{
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.7);
+	
+}
+
+.signup-panel{
+	display: flex;
+	color: white;
+	margin: auto;
+	margin-bottom: 50%;
+    width: 60%;
+    overflow: hidden;
+/*    border-radius: 20px;
+    padding: 1%;*/
+    background-color: transparent;
+/*	-webkit-box-shadow: 0px 0px 51px 14px rgba(255,255,255,0.7);
+-moz-box-shadow: 0px 0px 51px 14px rgba(255,255,255,0.7);
+box-shadow: 0px 0px 51px 14px rgba(255,255,255,0.7);*/
+}
+
+.signup-panel-design{
+	width: 50%;
+	padding: none;
+	overflow: hidden;
+	position: relative;
+	color: white;
+}
+
+.signup-panel-design-logo{
+display: block;
+}
+.signup-panel-design-text{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.signup-panel-design-text-heading{
+	color: white;
+	font-size: 400%;
+	letter-spacing: 25px;
+	font-family: 'Helvetica Neue', sans-serif; 
+	font-weight: bold; 
+/*	 letter-spacing: -1px; 
+*/	
+/*	 text-align: center;
+*/}
+
+.signup-panel-form{
+	max-width: 70%;
+	padding: 1%;
+	background-color: rgba(255,255,255,0.1);
+	border-radius: 0 5px 5px 0;
+
+
+}
+
+.signup-panel-form-div1
+{
+	padding: 5%;
+	height: 20%;
+	overflow: hidden;
+}
+.signup-panel-form-div2
+{
+	height: 80%;
+}
+
+#profilepic{
+	max-width: 200px;
+    max-height: 300px;
+	position: relative;
+}
+.container{
+display: inline-block;
+padding: none;
+margin: none;
+/*padding-left: 45%;
+padding-top: 10%;
+padding-bottom: 10%;*/
+}
+
+
+.inputbody{
+	width: 90%;
+	border-radius: 5px;
+	padding: 5%;
+	background-color: rgba(256,256,256,0.2);
+	color: #a9a9a9;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	border:rgba(256,256,256,0.2);
+	transition-duration: 0.2s;
+}
+.inputbody:hover{
+	transform: scale(1.05);
+	color: white;
+}
+
+.inputbody::placeholder{
+	color: rgba(255,255,255,0.5);
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	font-size: 90%; 
+}
+
+.inputbody:hover::placeholder{
+	font-size: 80%;
+}
+
+.check1{
+	background-color: transparent;
+	color: transparent;
+}
+
+.submitbut{
+	width: 90%;
+	border-radius: 5px;
+	padding: 3%;
+	background-color:rgb(0,168,246);
+	border: none;
+	color: black;
+	margin: 5%;
+	letter-spacing: 4px;
+}
+
+.submitbut:hover{
+/*	width: 35%;
+	padding: 20px;*/
+	border-color: black;
+	transition-duration: 0.2s;
+	box-shadow: 0 0 15px 8px #b0e0ee;
+	color: black;
+}
